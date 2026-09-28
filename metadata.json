@@ -1,0 +1,6 @@
+{
+  "name": "منشور — دانشنامه فارسی رنگین‌کمان",
+  "description": "دانشنامه مینی فارسی برای معرفی اصطلاحات، هویت‌ها، خط زمانی و مفاهیم جامعه رنگین‌کمان با قابلیت‌های حریم خصوصی، تم‌های رنگی و دسترسی‌پذیری",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

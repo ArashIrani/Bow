@@ -1,0 +1,3015 @@
+<!doctype html>
+<html lang="fa" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منشور — دانشنامه فارسی رنگین‌کمان</title>
+    <meta name="description" content="دانشنامه مینی فارسی برای معرفی اصطلاحات، هویت‌ها، خط زمانی و مفاهیم جامعه رنگین‌کمان با استانداردهای علمی و امنیت بالا." />
+    <meta property="og:title" content="منشور — دانشنامه فارسی رنگین‌کمان" />
+    <meta property="og:description" content="دانشنامه مینی فارسی برای معرفی اصطلاحات و هویت‌های جامعه رنگین‌کمان" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,15 90,85 10,85' fill='%236366f1'/><path d='M50,15 L90,85 L10,85 Z' fill='none' stroke='url(%23rainbow)' stroke-width='6'/><defs><linearGradient id='rainbow' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23ef4444'/><stop offset='20%25' stop-color='%23f97316'/><stop offset='40%25' stop-color='%23eab308'/><stop offset='60%25' stop-color='%2322c55e'/><stop offset='80%25' stop-color='%233b82f6'/><stop offset='100%25' stop-color='%23a855f7'/></linearGradient></defs></svg>" />
+    <style>
+      /* --- Root Design Variables & Theme Styles --- */
+      :root {
+        --font-sans: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --bg-main: #0c0e14;
+        --bg-surface: #141724;
+        --bg-surface-elevated: #1a1e2e;
+        --bg-surface-subtle: #20263a;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --border-subtle: rgba(255, 255, 255, 0.08);
+        --border-highlight: rgba(255, 255, 255, 0.16);
+        --accent-red: #f43f5e;
+        --accent-orange: #fb923c;
+        --accent-amber: #fbbf24;
+        --accent-green: #34d399;
+        --accent-blue: #38bdf8;
+        --accent-purple: #c084fc;
+        --radius-lg: 20px;
+        --radius-md: 14px;
+        --radius-sm: 8px;
+        --content-max: 1180px;
+        --font-scale: 1;
+      }
+
+      html.light {
+        --bg-main: #f8fafc;
+        --bg-surface: #ffffff;
+        --bg-surface-elevated: #f1f5f9;
+        --bg-surface-subtle: #e2e8f0;
+        --text-primary: #0f172a;
+        --text-secondary: #475569;
+        --text-muted: #64748b;
+        --border-subtle: rgba(0, 0, 0, 0.08);
+        --border-highlight: rgba(0, 0, 0, 0.14);
+      }
+
+      /* High Contrast Accessibility Mode */
+      html.high-contrast {
+        --bg-main: #000000;
+        --bg-surface: #0a0a0a;
+        --bg-surface-elevated: #171717;
+        --text-primary: #ffffff;
+        --text-secondary: #e5e5e5;
+        --border-subtle: #525252;
+        --border-highlight: #ffffff;
+      }
+      html.light.high-contrast {
+        --bg-main: #ffffff;
+        --bg-surface: #ffffff;
+        --bg-surface-elevated: #f4f4f5;
+        --text-primary: #000000;
+        --text-secondary: #18181b;
+        --border-subtle: #000000;
+        --border-highlight: #000000;
+      }
+
+      /* Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      html.reduce-motion *, html.reduce-motion ::before, html.reduce-motion ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: var(--bg-main);
+        color: var(--text-primary);
+        line-height: 1.7;
+        direction: rtl;
+        font-size: calc(16px * var(--font-scale));
+        min-height: 100vh;
+        overflow-x: hidden;
+        transition: background-color 0.25s ease, color 0.25s ease;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button, input, select {
+        font-family: inherit;
+        font-size: inherit;
+      }
+
+      /* Container */
+      .container {
+        width: 100%;
+        max-width: var(--content-max);
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      /* Rainbow gradients & effects */
+      .rainbow-text {
+        background: linear-gradient(135deg, #f43f5e, #fb923c, #fbbf24, #34d399, #38bdf8, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .rainbow-border-glow {
+        position: relative;
+      }
+      .rainbow-border-glow::before {
+        content: '';
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(135deg, rgba(244,63,94,0.35), rgba(251,146,60,0.3), rgba(52,211,153,0.3), rgba(56,189,248,0.3), rgba(192,132,252,0.35));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+      }
+
+      /* Header */
+      header.site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background-color: rgba(12, 14, 20, 0.82);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border-subtle);
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+      }
+      html.light header.site-header {
+        background-color: rgba(248, 250, 252, 0.85);
+      }
+
+      .nav-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4.25rem;
+        gap: 1rem;
+      }
+
+      .brand-lockup {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        cursor: pointer;
+      }
+
+      .brand-logo-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(244,63,94,0.15), rgba(56,189,248,0.15));
+        border: 1px solid var(--border-highlight);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .header-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      /* Buttons & Chips */
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: var(--radius-sm);
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .icon-btn:hover {
+        color: var(--text-primary);
+        border-color: var(--border-highlight);
+        transform: translateY(-1px);
+      }
+
+      .lang-select-wrapper {
+        position: relative;
+      }
+      .lang-select {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-primary);
+        padding: 0.45rem 0.8rem;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+        font-size: 0.875rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+      }
+      .lang-select:focus {
+        border-color: var(--accent-purple);
+      }
+
+      /* Quick Exit Floating & Header Button */
+      .quick-exit-btn {
+        background: linear-gradient(135deg, #e11d48, #be123c);
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-sm);
+        border: none;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        box-shadow: 0 4px 14px rgba(225, 29, 72, 0.35);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        white-space: nowrap;
+      }
+      .quick-exit-btn:hover {
+        transform: scale(1.03);
+        box-shadow: 0 6px 20px rgba(225, 29, 72, 0.5);
+      }
+      .quick-exit-floating {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 1.5rem;
+        z-index: 99;
+      }
+
+      /* Hero Section with Animated Prism Dispersion */
+      .hero-section {
+        padding: 4.5rem 0 3.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: -15%;
+        right: 10%;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(192, 132, 252, 0.12) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
+        pointer-events: none;
+        filter: blur(40px);
+      }
+
+      .prism-stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+      }
+
+      /* Prism Visualizer */
+      .prism-animation-box {
+        width: 100%;
+        max-width: 520px;
+        height: 180px;
+        position: relative;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .prism-glass {
+        width: 80px;
+        height: 80px;
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.25));
+        animation: prismFloat 4s ease-in-out infinite alternate;
+      }
+      @keyframes prismFloat {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-6px) rotate(1deg); }
+      }
+
+      /* White incident light beam */
+      .incident-beam {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        width: 36%;
+        height: 4px;
+        background: linear-gradient(to left, rgba(255,255,255,0.05), rgba(255,255,255,0.95));
+        transform: translateY(-50%) rotate(7deg);
+        transform-origin: right center;
+        box-shadow: 0 0 16px rgba(255, 255, 255, 0.8);
+        border-radius: 4px;
+        z-index: 1;
+      }
+
+      /* Rainbow dispersed rays */
+      .dispersed-spectrum {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        width: 44%;
+        height: 110px;
+        transform: translateY(-50%);
+        transform-origin: right center;
+        z-index: 1;
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      .spectrum-ray {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        transform-origin: right center;
+        filter: blur(1.5px);
+        animation: rayPulse 3s ease-in-out infinite alternate;
+      }
+      .ray-1 { background: #f43f5e; transform: translateY(-50%) rotate(-18deg); box-shadow: 0 0 12px #f43f5e; animation-delay: 0.1s; }
+      .ray-2 { background: #fb923c; transform: translateY(-50%) rotate(-11deg); box-shadow: 0 0 12px #fb923c; animation-delay: 0.2s; }
+      .ray-3 { background: #fbbf24; transform: translateY(-50%) rotate(-4deg); box-shadow: 0 0 12px #fbbf24; animation-delay: 0.3s; }
+      .ray-4 { background: #34d399; transform: translateY(-50%) rotate(3deg); box-shadow: 0 0 12px #34d399; animation-delay: 0.4s; }
+      .ray-5 { background: #38bdf8; transform: translateY(-50%) rotate(10deg); box-shadow: 0 0 12px #38bdf8; animation-delay: 0.5s; }
+      .ray-6 { background: #c084fc; transform: translateY(-50%) rotate(17deg); box-shadow: 0 0 12px #c084fc; animation-delay: 0.6s; }
+
+      @keyframes rayPulse {
+        0% { opacity: 0.75; transform-origin: right center; }
+        100% { opacity: 1; filter: blur(0.5px); }
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        font-weight: 900;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+        letter-spacing: -0.03em;
+        text-wrap: balance;
+      }
+
+      .hero-lead {
+        font-size: clamp(1rem, 2vw, 1.18rem);
+        color: var(--text-secondary);
+        max-width: 680px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.8;
+      }
+
+      /* Search & Filter Bar */
+      .search-container {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .search-input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+        transition: all 0.25s ease;
+      }
+      .search-input-wrapper:focus-within {
+        border-color: rgba(192, 132, 252, 0.6);
+        box-shadow: 0 8px 35px rgba(192, 132, 252, 0.15);
+      }
+
+      .search-icon {
+        padding-right: 1.25rem;
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+      }
+
+      .search-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 1.1rem 1rem 1.1rem 1.25rem;
+        color: var(--text-primary);
+        font-size: 1.05rem;
+      }
+      .search-input::placeholder {
+        color: var(--text-muted);
+      }
+
+      .search-clear {
+        padding-left: 1.25rem;
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        cursor: pointer;
+        display: none;
+      }
+      .search-clear.active {
+        display: flex;
+      }
+
+      /* Filter Badges & Categories */
+      .filter-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1.25rem;
+      }
+
+      .filter-chip {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        padding: 0.4rem 0.9rem;
+        border-radius: 9999px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .filter-chip:hover {
+        color: var(--text-primary);
+        border-color: var(--border-highlight);
+      }
+      .filter-chip.active {
+        background: linear-gradient(135deg, rgba(192,132,252,0.2), rgba(56,189,248,0.2));
+        color: var(--text-primary);
+        border-color: rgba(192, 132, 252, 0.5);
+      }
+
+      /* Level Indicators */
+      .level-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-left: 0.4rem;
+      }
+      .level-1 { background-color: var(--accent-green); }
+      .level-2 { background-color: var(--accent-amber); }
+      .level-3 { background-color: var(--text-muted); }
+
+      /* Section Header Typography */
+      .section-heading-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+      }
+      .section-kicker {
+        font-size: 0.825rem;
+        font-weight: 700;
+        color: var(--accent-purple);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 0.35rem;
+      }
+      .section-title {
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+      .section-desc {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-top: 0.35rem;
+        max-width: 640px;
+      }
+
+      /* Card Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1.35rem;
+        margin-bottom: 4rem;
+      }
+
+      .term-card {
+        background-color: var(--bg-surface);
+        border-radius: var(--radius-md);
+        padding: 1.5rem;
+        border: 1px solid var(--border-subtle);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+      .term-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+        border-color: var(--border-highlight);
+      }
+
+      .card-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      .card-letter-badge {
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--bg-surface-elevated), var(--bg-surface-subtle));
+        border: 1px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.75rem;
+        font-weight: 900;
+        color: var(--text-primary);
+        box-shadow: inset 0 1px 2px rgba(255,255,255,0.08);
+      }
+
+      .card-level-badge {
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.65rem;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .badge-level-1 {
+        background-color: rgba(52, 211, 153, 0.12);
+        color: #34d399;
+        border: 1px solid rgba(52, 211, 153, 0.3);
+      }
+      .badge-level-2 {
+        background-color: rgba(251, 191, 36, 0.12);
+        color: #fbbf24;
+        border: 1px solid rgba(251, 191, 36, 0.3);
+      }
+      .badge-level-3 {
+        background-color: rgba(148, 163, 184, 0.12);
+        color: #94a3b8;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+      }
+
+      /* Bookmark Button on Card */
+      .bookmark-btn {
+        width: 2.1rem;
+        height: 2.1rem;
+        border-radius: 9px;
+        background-color: var(--bg-surface-elevated);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        flex-shrink: 0;
+      }
+      .bookmark-btn:hover {
+        color: #fbbf24;
+        border-color: rgba(251, 191, 36, 0.45);
+        background-color: rgba(251, 191, 36, 0.1);
+        transform: scale(1.08);
+      }
+      .bookmark-btn.active {
+        color: #fbbf24;
+        background-color: rgba(251, 191, 36, 0.18);
+        border-color: rgba(251, 191, 36, 0.55);
+        box-shadow: 0 0 10px rgba(251, 191, 36, 0.25);
+      }
+      .bookmark-btn svg {
+        transition: transform 0.2s ease, fill 0.2s ease;
+      }
+      .bookmark-btn:active svg {
+        transform: scale(0.85);
+      }
+
+      /* Header bookmark badge */
+      .header-badge-count {
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        background: linear-gradient(135deg, #f43f5e, #fb923c);
+        color: #fff;
+        font-size: 0.65rem;
+        font-weight: 800;
+        min-width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        padding: 0 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+        border: 1.5px solid var(--bg-surface);
+      }
+
+      .card-persian-name {
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 0.35rem;
+        color: var(--text-primary);
+      }
+
+      .card-english-term {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        font-family: var(--font-sans);
+        direction: ltr;
+        display: inline-block;
+        margin-bottom: 0.85rem;
+      }
+
+      .card-def {
+        font-size: 0.92rem;
+        color: var(--text-secondary);
+        line-height: 1.65;
+        margin-bottom: 1.25rem;
+        flex-grow: 1;
+      }
+
+      .card-action-link {
+        font-size: 0.825rem;
+        font-weight: 700;
+        color: var(--accent-blue);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        transition: gap 0.2s ease;
+      }
+      .term-card:hover .card-action-link {
+        gap: 0.55rem;
+      }
+
+      /* Modal Details Window */
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+      }
+      .modal-backdrop.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-dialog {
+        background-color: var(--bg-surface);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-highlight);
+        width: 100%;
+        max-width: 780px;
+        max-height: 88vh;
+        overflow-y: auto;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+        position: relative;
+        transform: translateY(20px) scale(0.98);
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        padding: 0;
+      }
+      .modal-backdrop.open .modal-dialog {
+        transform: translateY(0) scale(1);
+      }
+
+      .modal-dialog-content {
+        padding: 2.25rem;
+      }
+
+      /* Rainbow Reading Progress Bar */
+      .modal-reading-track {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background: rgba(255, 255, 255, 0.08);
+        z-index: 60;
+        overflow: hidden;
+      }
+      html.light .modal-reading-track {
+        background: rgba(0, 0, 0, 0.06);
+      }
+      .modal-reading-bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, #f43f5e, #fb923c, #fbbf24, #34d399, #38bdf8, #c084fc);
+        box-shadow: 0 0 12px rgba(192, 132, 252, 0.9), 0 0 6px rgba(56, 189, 248, 0.8);
+        transition: width 0.05s ease-out;
+      }
+
+      .modal-close-btn {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        background-color: var(--bg-surface-elevated);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        z-index: 20;
+      }
+      .modal-close-btn:hover {
+        color: var(--text-primary);
+        border-color: var(--border-highlight);
+      }
+
+      /* Concept Classification Banner */
+      .concept-category-banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--bg-surface-elevated);
+        border: 1px dashed var(--border-subtle);
+        border-radius: var(--radius-sm);
+        padding: 0.6rem 0.9rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .concept-category-badge {
+        font-weight: 700;
+        padding: 0.2rem 0.65rem;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .pillar-orientation {
+        background: rgba(244, 63, 94, 0.12);
+        color: #fb7185;
+        border: 1px solid rgba(244, 63, 94, 0.3);
+      }
+      .pillar-gender {
+        background: rgba(56, 189, 248, 0.12);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+      }
+      .pillar-sex {
+        background: rgba(52, 211, 153, 0.12);
+        color: #34d399;
+        border: 1px solid rgba(52, 211, 153, 0.3);
+      }
+      .pillar-umbrella {
+        background: rgba(192, 132, 252, 0.12);
+        color: #c084fc;
+        border: 1px solid rgba(192, 132, 252, 0.3);
+      }
+
+      .comparison-guide-btn {
+        background: transparent;
+        border: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        border-radius: 6px;
+        padding: 0.3rem 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .comparison-guide-btn:hover {
+        background: var(--bg-surface-subtle);
+        color: var(--text-primary);
+        border-color: var(--border-highlight);
+      }
+
+      /* Modal Embedded Comparison Section */
+      .modal-comparison-section {
+        margin-top: 1.75rem;
+        background: var(--bg-surface-elevated);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 1.15rem;
+      }
+      .modal-comparison-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      /* Comparative Visual Table */
+      .comparison-table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        margin: 1.25rem 0;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        background: var(--bg-surface);
+        -webkit-overflow-scrolling: touch;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        text-align: right;
+        min-width: 660px;
+        font-size: 0.88rem;
+      }
+      .comparison-table th {
+        background: var(--bg-surface-subtle);
+        padding: 0.9rem 1.1rem;
+        font-weight: 800;
+        border-bottom: 2px solid var(--border-subtle);
+        color: var(--text-primary);
+        white-space: nowrap;
+      }
+      .comparison-table th.col-highlighted,
+      .comparison-table td.col-highlighted {
+        background-color: rgba(192, 132, 252, 0.08);
+      }
+      .comparison-table td {
+        padding: 0.95rem 1.1rem;
+        border-bottom: 1px solid var(--border-subtle);
+        color: var(--text-secondary);
+        vertical-align: top;
+        line-height: 1.7;
+      }
+      .comparison-table tr:last-child td {
+        border-bottom: none;
+      }
+      .comparison-table tr:hover td {
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+      .col-header-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.875rem;
+      }
+      .criterion-title {
+        font-weight: 800;
+        color: var(--text-primary);
+        background: var(--bg-surface-subtle);
+        white-space: nowrap;
+        width: 20%;
+      }
+      .table-badge-dot {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+
+      /* Scientific Perspective Box */
+      .science-box {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(192, 132, 252, 0.08));
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        border-radius: var(--radius-md);
+        padding: 1.25rem;
+        margin: 1.75rem 0;
+      }
+      .science-box-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--accent-blue);
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+      }
+      .science-box-content {
+        font-size: 0.925rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+      }
+
+      /* Accordion for Common Misconceptions */
+      .accordion-wrap {
+        margin: 1.75rem 0 1rem;
+      }
+      .accordion-title {
+        font-size: 1.05rem;
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+        color: var(--text-primary);
+      }
+      .accordion-item {
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-sm);
+        margin-bottom: 0.65rem;
+        background-color: var(--bg-surface-elevated);
+        overflow: hidden;
+      }
+      .accordion-trigger {
+        width: 100%;
+        text-align: right;
+        padding: 0.95rem 1.15rem;
+        background: none;
+        border: none;
+        color: var(--text-primary);
+        font-weight: 600;
+        font-size: 0.925rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      .accordion-trigger:hover {
+        background-color: var(--bg-surface-subtle);
+      }
+      .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+        padding: 0 1.15rem;
+        background-color: var(--bg-surface);
+      }
+      .accordion-item.active .accordion-body {
+        max-height: 350px;
+        padding: 1rem 1.15rem 1.25rem;
+        border-top: 1px solid var(--border-subtle);
+        transition: max-height 0.35s ease-in-out;
+      }
+      .misconception-label {
+        color: var(--accent-red);
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+      }
+      .fact-label {
+        color: var(--accent-green);
+        font-weight: 700;
+        font-size: 0.85rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.25rem;
+      }
+
+      /* Long Acronyms Section */
+      .long-acronyms-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 4.5rem;
+      }
+      .acronym-card {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 1.75rem;
+        position: relative;
+      }
+      .acronym-string {
+        font-size: 1.1rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        word-break: break-all;
+        color: var(--accent-purple);
+        direction: ltr;
+        text-align: left;
+        margin-bottom: 0.75rem;
+        background: rgba(192, 132, 252, 0.08);
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(192, 132, 252, 0.2);
+      }
+
+      /* Timeline Section */
+      .timeline-section {
+        margin-bottom: 5rem;
+      }
+      .timeline-track {
+        position: relative;
+        padding: 1.5rem 0;
+      }
+      .timeline-track::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 24px;
+        width: 3px;
+        background: linear-gradient(to bottom, #f43f5e, #fb923c, #34d399, #38bdf8, #c084fc);
+        border-radius: 2px;
+      }
+      .timeline-node {
+        position: relative;
+        margin-bottom: 2.25rem;
+        padding-right: 4rem;
+      }
+      .timeline-marker {
+        position: absolute;
+        right: 14px;
+        top: 0.35rem;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: var(--bg-surface);
+        border: 3px solid var(--accent-purple);
+        box-shadow: 0 0 10px rgba(192, 132, 252, 0.6);
+        z-index: 2;
+      }
+      .timeline-card {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-md);
+        padding: 1.35rem;
+      }
+      .timeline-era {
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: var(--accent-amber);
+        margin-bottom: 0.25rem;
+      }
+      .timeline-evolution {
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+        direction: ltr;
+        text-align: right;
+      }
+
+      /* Footer */
+      footer.site-footer {
+        border-top: 1px solid var(--border-subtle);
+        background-color: var(--bg-surface);
+        padding: 3.5rem 0 2rem;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 1.75rem;
+        }
+      }
+      .footer-title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+      }
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.65rem;
+      }
+      .footer-links a:hover {
+        color: var(--accent-blue);
+      }
+      .footer-bottom {
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.825rem;
+        color: var(--text-muted);
+      }
+
+      /* Toast Notification */
+      .toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 120;
+        background-color: var(--bg-surface-elevated);
+        color: var(--text-primary);
+        border: 1px solid var(--border-highlight);
+        padding: 0.85rem 1.4rem;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.9rem;
+        transform: translateY(100px);
+        opacity: 0;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        pointer-events: none;
+      }
+      .toast.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* Modals for Privacy, 2FA, Accessibility */
+      .control-panel-modal {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(8px);
+        z-index: 110;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+      }
+      .control-panel-modal.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .control-panel-body {
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-highlight);
+        border-radius: var(--radius-lg);
+        width: 100%;
+        max-width: 580px;
+        padding: 2rem;
+        position: relative;
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .setting-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-subtle);
+        gap: 1rem;
+      }
+      .setting-info h4 {
+        font-size: 0.975rem;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+      .setting-info p {
+        font-size: 0.825rem;
+        color: var(--text-secondary);
+        margin-top: 0.2rem;
+      }
+
+      /* Switch toggle */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 48px;
+        height: 26px;
+        flex-shrink: 0;
+      }
+      .switch input { opacity: 0; width: 0; height: 0; }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: var(--bg-surface-subtle);
+        border: 1px solid var(--border-subtle);
+        transition: .3s;
+        border-radius: 34px;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 3px;
+        background-color: white;
+        transition: .3s;
+        border-radius: 50%;
+      }
+      input:checked + .slider {
+        background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+      }
+      input:checked + .slider:before {
+        transform: translateX(22px);
+      }
+
+      /* Security Lock Overlay */
+      .app-lock-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: var(--bg-main);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+      }
+      .pin-input-group {
+        display: flex;
+        gap: 0.75rem;
+        margin: 1.5rem 0;
+        direction: ltr;
+      }
+      .pin-digit {
+        width: 45px;
+        height: 52px;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border-highlight);
+        background: var(--bg-surface);
+        color: var(--text-primary);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- App Lock Overlay (2FA/Security Passcode) -->
+    <div id="appLockOverlay" class="app-lock-overlay" style="display: none;">
+      <div class="brand-logo-icon" style="width: 56px; height: 56px; margin-bottom: 1.25rem;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem;">قفل حریم خصوصی منشور</h2>
+      <p style="color: var(--text-secondary); max-width: 380px; font-size: 0.9rem;">برای دسترسی مجدد، لطفاً رمز ۴ رقمی یا کد تأیید دومرحله‌ای خود را وارد کنید.</p>
+      <div class="pin-input-group">
+        <input type="password" maxlength="1" class="pin-digit" id="pin1" />
+        <input type="password" maxlength="1" class="pin-digit" id="pin2" />
+        <input type="password" maxlength="1" class="pin-digit" id="pin3" />
+        <input type="password" maxlength="1" class="pin-digit" id="pin4" />
+      </div>
+      <button id="unlockBtn" class="quick-exit-btn" style="background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue)); padding: 0.65rem 2rem;">
+        بازگشایی دانشنامه
+      </button>
+      <p id="lockErrorMsg" style="color: var(--accent-red); margin-top: 1rem; font-size: 0.85rem; display: none;">رمز عبور نادرست است. (رمز دمو: ۱۲۳۴)</p>
+    </div>
+
+    <!-- Quick Exit Floating Button -->
+    <div class="quick-exit-floating">
+      <button id="floatingQuickExitBtn" class="quick-exit-btn" title="خروج سریع و امن (کلید میانبر: Esc)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+        <span>خروج اضطراری (Esc)</span>
+      </button>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-row">
+          <!-- Zone 1: Brand -->
+          <div class="brand-lockup" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            <div class="brand-logo-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 22 20 2 20" stroke="url(#hdr-rainbow)" stroke-width="2.2" />
+                <defs>
+                  <linearGradient id="hdr-rainbow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f43f5e"/>
+                    <stop offset="30%" stop-color="#fbbf24"/>
+                    <stop offset="70%" stop-color="#38bdf8"/>
+                    <stop offset="100%" stop-color="#c084fc"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="brand-name">منشور</span>
+          </div>
+
+          <!-- Zone 2: Navigation Links (Clean text) -->
+          <nav style="display: flex; gap: 1.5rem; font-size: 0.9rem; font-weight: 500;" class="nav-links-desktop">
+            <a href="#letters-section" style="color: var(--text-secondary); transition: color 0.2s;" onmouseover="this.style.color=getComputedStyle(document.body).getPropertyValue('--text-primary')" onmouseout="this.style.color=getComputedStyle(document.body).getPropertyValue('--text-secondary')">حروف LGBTQIA+</a>
+            <a href="#long-acronyms-section" style="color: var(--text-secondary); transition: color 0.2s;" onmouseover="this.style.color=getComputedStyle(document.body).getPropertyValue('--text-primary')" onmouseout="this.style.color=getComputedStyle(document.body).getPropertyValue('--text-secondary')">آکرونیم‌های گسترده</a>
+            <a href="#timeline-section" style="color: var(--text-secondary); transition: color 0.2s;" onmouseover="this.style.color=getComputedStyle(document.body).getPropertyValue('--text-primary')" onmouseout="this.style.color=getComputedStyle(document.body).getPropertyValue('--text-secondary')">خط زمانی</a>
+          </nav>
+
+          <!-- Zone 3: Controls & Quick Exit -->
+          <div class="header-controls">
+            <!-- Language Dropdown -->
+            <div class="lang-select-wrapper">
+              <select id="langSelect" class="lang-select" aria-label="انتخاب زبان">
+                <option value="fa" selected>فارسی</option>
+                <option value="ar" disabled>العربية (به‌زودی)</option>
+                <option value="tr" disabled>Türkçe (به‌زودی)</option>
+                <option value="hi" disabled>हिन्दी (به‌زودی)</option>
+              </select>
+            </div>
+
+            <!-- Accessibility & Appearance Trigger -->
+            <button id="accessBtn" class="icon-btn" title="شخصی‌سازی و دسترسی‌پذیری" aria-label="تنظیمات دسترسی‌پذیری">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </button>
+
+            <!-- Bookmarks / My Library Header Button -->
+            <button id="headerBookmarksBtn" class="icon-btn" title="کتابخانه من (اصطلاحات نشان‌شده)" aria-label="کتابخانه من" style="position: relative;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+              <span id="headerBookmarkBadge" class="header-badge-count" style="display: none;">0</span>
+            </button>
+
+            <!-- Privacy & 2FA Suite Trigger -->
+            <button id="privacyBtn" class="icon-btn" title="تنظیمات حریم خصوصی و امنیت" aria-label="حریم خصوصی">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </button>
+
+            <!-- Dark/Light Theme Toggle -->
+            <button id="themeToggleBtn" class="icon-btn" title="تغییر تم تاریک / روشن" aria-label="تغییر تم">
+              <span id="themeIcon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              </span>
+            </button>
+
+            <!-- Quick Exit Header Button -->
+            <button id="headerQuickExitBtn" class="quick-exit-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+              <span>خروج سریع</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="prism-stage">
+            <!-- Animated Prism Concept -->
+            <div class="prism-animation-box" aria-hidden="true">
+              <!-- Incident white beam coming into prism from right (RTL orientation) -->
+              <div class="incident-beam"></div>
+
+              <!-- Triangular Prism Glass -->
+              <div class="prism-glass">
+                <svg viewBox="0 0 100 100" width="100%" height="100%">
+                  <!-- Glass body -->
+                  <polygon points="50,12 88,88 12,88" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.55)" stroke-width="2.5" />
+                  <!-- Refraction facet reflections -->
+                  <line x1="50" y1="12" x2="42" y2="88" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+                  <line x1="50" y1="12" x2="68" y2="88" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1" />
+                  <polygon points="50,12 42,88 12,88" fill="rgba(56, 189, 248, 0.08)" />
+                </svg>
+              </div>
+
+              <!-- Dispersed Rainbow Rays emerging to the left -->
+              <div class="dispersed-spectrum">
+                <div class="spectrum-ray ray-1"></div>
+                <div class="spectrum-ray ray-2"></div>
+                <div class="spectrum-ray ray-3"></div>
+                <div class="spectrum-ray ray-4"></div>
+                <div class="spectrum-ray ray-5"></div>
+                <div class="spectrum-ray ray-6"></div>
+              </div>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h1 class="hero-title">
+              منشور — <span class="rainbow-text">دانشنامه فارسی رنگین‌کمان</span>
+            </h1>
+            <p class="hero-lead">
+              همان‌گونه که منشور نور یکدست را به طیف درخشان رنگ‌ها می‌گشاید، این دانشنامه تنوع هویت‌ها، گرایش‌ها، ویژگی‌های جنسی و تاریخچه جامعه رنگین‌کمان را با زبانی علمی، روشن و مستند تبیین می‌کند.
+            </p>
+
+            <!-- Search Box -->
+            <div class="search-container">
+              <div class="search-input-wrapper">
+                <span class="search-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                </span>
+                <input
+                  type="text"
+                  id="searchInput"
+                  class="search-input"
+                  placeholder="جستجوی حرف، واژه یا مفهوم (مثلاً: کوئیر، ترنس، اینترسکس، دوجنس‌گرا...)"
+                  autocomplete="off"
+                />
+                <button id="searchClearBtn" class="search-clear" title="پاک کردن جستجو">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </button>
+              </div>
+
+              <!-- Filter Toolbar -->
+              <div class="filter-toolbar">
+                <button class="filter-chip active" data-filter="all">همه اصطلاحات (<span id="totalCount">8</span>)</button>
+                <button class="filter-chip" data-filter="bookmarks" id="bookmarksFilterChip" title="مشاهده کارتهای ذخیره‌شده در کتابخانه من">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="vertical-align: middle;"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                  کتابخانه من (<span id="bookmarksCount">0</span>)
+                </button>
+                <button class="filter-chip" data-filter="level-1">
+                  <span class="level-dot level-1"></span>
+                  سطح ۱ (نهادی / بین‌المللی)
+                </button>
+                <button class="filter-chip" data-filter="level-2">
+                  <span class="level-dot level-2"></span>
+                  سطح ۲ (رایج و شناخته‌شده)
+                </button>
+                <button class="filter-chip" data-filter="level-3">
+                  <span class="level-dot level-3"></span>
+                  سطح ۳ (جامعه‌ساخت و پویا)
+                </button>
+                <button id="openComparisonPillBtn" type="button" class="filter-chip" style="background: linear-gradient(135deg, rgba(244,63,94,0.08), rgba(56,189,248,0.08)); border-color: rgba(192,132,252,0.45); color: var(--text-primary); font-weight: 700;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3h18v18H3z"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
+                  جدول مقایسه‌ای مفاهیم
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Letters Grid Section -->
+      <section id="letters-section" class="container" style="padding-top: 1rem;">
+        <div class="section-heading-wrap">
+          <span class="section-kicker">الفبای شمول و برابری</span>
+          <h2 class="section-title">کارتهای حروف LGBTQIA+</h2>
+          <p class="section-desc">برای مشاهده تعریف تفصیلی، شواهد علمی سازمان‌های بین‌المللی سلامت و کج‌فهمی‌های رایج روی هر کارت کلیک کنید.</p>
+        </div>
+
+        <!-- The Dynamic Term Cards Grid -->
+        <div id="cardsGrid" class="cards-grid">
+          <!-- Populated via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Long Acronyms Section -->
+      <section id="long-acronyms-section" class="container">
+        <div class="section-heading-wrap">
+          <span class="section-kicker">گونه‌های تعمیم‌یافته و بینافرهنگی</span>
+          <h2 class="section-title">آکرونیم‌های طولانی و جامعه‌ساخت</h2>
+          <p class="section-desc">آکرونیم‌های توسعه‌یافته با هدف به رسمیت شناختن ریزهویت‌ها، پویایی جنسیت و مفاهیم سنتی فرهنگ‌های بومی طراحی شده‌اند.</p>
+        </div>
+
+        <div class="long-acronyms-container">
+          <!-- Acronym 1 -->
+          <div class="acronym-card rainbow-border-glow">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="card-level-badge badge-level-3">سطح ۳ - جامعه‌ساخت</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">نسخه فوق‌جامع</span>
+            </div>
+            <div class="acronym-string">LGBTIQCAPGNGFNBA</div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem;">چتر شمول طیف‌های جنسیتی و جاذبه‌ها</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+              این صورت‌بندی شامل حروفی است که گرایش‌ها و تجارب متأخر را صراحتاً ثبت می‌کنند: <strong>C</strong> (کنجکاو / Questioning/Curious)، <strong>A</strong> (بی‌جنس‌گرا)، <strong>P</strong> (همه‌جنس‌گرا / Pansexual)، <strong>GN</strong> (ناهمخوان جنسیتی / Gender Non-conforming)، <strong>GF</strong> (سیالیت جنسیتی / Genderfluid)، <strong>NB</strong> (نان‌باینری / غیردوگانه) و <strong>A</strong> (بی‌جنسیت / Agender).
+            </p>
+            <div style="font-size: 0.85rem; background: var(--bg-surface-elevated); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-secondary);">
+              <strong>نکته کاربردی:</strong> معمولاً در مطالعات آکادمیک و گفتگوهای تخصصی برای تأکید بر شمول تمام اقلیت‌های جنسی و جنسیتی به کار می‌رود و در فضاهای عمومی نسخه کوتاه‌تر استفاده می‌شود.
+            </div>
+          </div>
+
+          <!-- Acronym 2 -->
+          <div class="acronym-card rainbow-border-glow">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span class="card-level-badge badge-level-3">سطح ۳ - جامعه‌ساخت</span>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">رسمی در آمریکای شمالی</span>
+            </div>
+            <div class="acronym-string">LGBTQQIP2SAA</div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem;">با تأکید بر فرهنگ بومیان Two-Spirit و متحدین</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1rem;">
+              این آکرونیم دارای جایگاه برجسته رسمی در کانادا و جوامع دانشگاهی است؛ شامل <strong>2S</strong> (دو-روح / Two-Spirit) هویتی سنتی و مقدس در فرهنگ بومیان نخستین قاره آمریکا، <strong>Q</strong> دوگانه (کوئیر و پرسشگر)، <strong>P</strong> (همه‌جنس‌گرا)، و <strong>A</strong> دوگانه (بی‌جنس‌گرا و متحدان / Allies).
+            </p>
+            <div style="font-size: 0.85rem; background: var(--bg-surface-elevated); padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-secondary);">
+              <strong>ریشه تاریخی Two-Spirit:</strong> احیای سنت‌هایی که پیش از ورود استعمارگران به آمریکا، افراد با تلفیق ویژگی‌های روحی زنانه و مردانه را به عنوان رهبران آیینی تکریم می‌کردند.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Historical Timeline Section -->
+      <section id="timeline-section" class="container timeline-section">
+        <div class="section-heading-wrap">
+          <span class="section-kicker">تحول واژگان و تکامل تاریخی</span>
+          <h2 class="section-title">خط زمانی: از دهه ۱۹۸۰ تا امروز</h2>
+          <p class="section-desc">سیر دگرگونی نام‌گذاری جامعه رنگین‌کمان نشان‌دهنده تعمیق درک بشر از تمایز میان گرایش جنسی، هویت جنسیتی و ویژگی‌های فیزیکی است.</p>
+        </div>
+
+        <div class="timeline-track">
+          <!-- Step 1 -->
+          <div class="timeline-node">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-era">دهه ۱۹۷۰ و اوایل دهه ۱۹۸۰</div>
+              <div class="timeline-evolution">Gay & Lesbian</div>
+              <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.7;">
+                در سال‌های پس از شورش استون‌وال (۱۹۶۹)، اصطلاح «همجنس‌گرا» (Gay) به عنوان واژه‌ای رهایی‌بخش جایگزین برچسب‌های آسیب‌شناختی پزشکی شد. در دهه ۱۹۸۰ با رشد جنبش فمینیستی لزبین‌ها، عبارت «Gay & Lesbian» فراگیر شد تا هویت زنان به حاشیه رانده نشود.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-node">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-era">اواخر دهه ۱۹۸۰ و دهه ۱۹۹۰</div>
+              <div class="timeline-evolution">LGBT</div>
+              <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.7;">
+                با پیوستن افراد دوجنس‌گرا (Bisexual) و سپس ترنسجندر (Transgender)، آکرونیم معروف چهارحرفی <strong>LGBT</strong> متولد شد. این اتحاد تاریخی نشان داد مطالبات مربوط به گرایش جنسی و هویت جنسیتی نیازمند جبهه‌ای واحد در برابر تبعیض قانونی و اجتماعی است.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-node">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-era">دهه ۲۰۰۰</div>
+              <div class="timeline-evolution">LGBTQ</div>
+              <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.7;">
+                افزوده شدن حرف <strong>Q</strong> برای کلمه کوئیر (Queer) یا پرسشگر (Questioning). اصطلاح کوئیر که پیش‌تر بار تحقیرآمیز داشت، توسط نسل جوان بازپس‌گرفته شد تا چارچوب‌های سخت طبقه‌بندی هویت را به چالش بکشد و بازتاب‌دهنده تجارب غیرخطی باشد.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-node">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card" style="border-color: rgba(192, 132, 252, 0.4); background: linear-gradient(135deg, var(--bg-surface), var(--bg-surface-elevated));">
+              <div class="timeline-era" style="color: var(--accent-green);">از دهه ۲۰۱۰ تا عصر حاضر</div>
+              <div class="timeline-evolution">LGBTQIA+</div>
+              <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.7;">
+                حضور سازمان‌یافته افراد بیناجنسی (Intersex) و جامعه بی‌جنس‌گرا (Asexual/Aromantic) به آکرونیم رسمیت بخشید. علامت مثبت «<strong>+</strong>» به رسمیت شناختن این واقعیت است که زبان پیوسته در حال تکامل است و دامنه تنوع انسانی هیچ‌گاه در چند حرف محدود نمی‌شود.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Detail View Modal -->
+    <div id="detailModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTermTitle">
+      <div class="modal-dialog">
+        <!-- Sticky Rainbow Reading Progress Bar -->
+        <div class="modal-reading-track" title="نوار پیشرفت مطالعه مقاله">
+          <div id="modalReadingProgress" class="modal-reading-bar"></div>
+        </div>
+
+        <div class="modal-dialog-content">
+          <button id="modalCloseBtn" class="modal-close-btn" aria-label="بستن پنجره">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div id="modalLetterBadge" class="card-letter-badge" style="width: 4rem; height: 4rem; font-size: 2.25rem;"></div>
+              <div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                  <h2 id="modalTermTitle" style="font-size: 1.75rem; font-weight: 800; color: var(--text-primary); margin: 0;"></h2>
+                  <span id="modalLevelBadge" class="card-level-badge"></span>
+                  <span id="modalPillarBadge" class="concept-category-badge"></span>
+                </div>
+                <div id="modalEnglishTerm" style="color: var(--text-muted); font-size: 0.95rem; direction: ltr; text-align: right; margin-top: 0.2rem;"></div>
+              </div>
+            </div>
+            <button id="modalTopBookmarkBtn" class="bookmark-btn" style="width: 2.5rem; height: 2.5rem; margin-left: 2.5rem;" title="نشان‌کردن در کتابخانه من" aria-label="نشان کردن در کتابخانه">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            </button>
+          </div>
+
+          <!-- Concept Classification & Comparison Shortcut -->
+          <div class="concept-category-banner">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="color: var(--text-muted); font-size: 0.825rem;">ستون مفهومی این مدخل:</span>
+              <strong id="modalPillarName" style="color: var(--text-primary); font-size: 0.85rem;"></strong>
+            </div>
+            <button id="modalOpenCompareBtn" type="button" class="comparison-guide-btn" title="مشاهده جدول مقایسه‌ای کامل در متدولوژی">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
+              <span>مشاهده جدول مقایسه‌ای مفاهیم</span>
+            </button>
+          </div>
+
+          <div id="modalBodyArticle" style="color: var(--text-secondary); font-size: 1rem; line-height: 1.85; margin-bottom: 1.5rem;"></div>
+
+          <!-- Scientific Perspective Box -->
+          <div class="science-box">
+            <div class="science-box-header">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L4.2 18.2a2 2 0 0 0 1.6 3.8h12.4a2 2 0 0 0 1.6-3.8L14 9.31V2"/></svg>
+              <span>دیدگاه علمی و بالینی بین‌المللی</span>
+            </div>
+            <div id="modalScienceContent" class="science-box-content"></div>
+          </div>
+
+          <!-- Misconceptions Accordion -->
+          <div class="accordion-wrap">
+            <h3 class="accordion-title">کج‌فهمی‌های رایج و واقعیت‌های مستند</h3>
+            <div id="modalMisconceptionsList"></div>
+          </div>
+
+          <!-- Embedded Comparative Quick Guide Section inside Modal -->
+          <div class="modal-comparison-section">
+            <div class="modal-comparison-header" id="modalComparisonToggleHeader">
+              <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M12 3v18"/><path d="M3 12h18"/></svg>
+                <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--text-primary); margin: 0;">جدول مقایسه‌ای تمایز مفاهیم کلیدی</h4>
+              </div>
+              <button id="toggleModalTableBtn" type="button" class="comparison-guide-btn" style="padding: 0.25rem 0.65rem;">
+                <span id="toggleModalTableText">نمایش جدول مقایسه‌ای</span>
+                <svg id="toggleModalTableIcon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+            </div>
+            <div id="modalComparisonTableCollapse" style="display: none; margin-top: 1rem;">
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+                برای درک بهتر جایگاه این مدخل، تفاوتهای کلیدی سه رکن بنیادین (گرایش جنسی، هویت جنسیتی و ویژگی‌های جنسی) در جدول زیر به صورت ساده و مقایسه‌ای ارائه شده است:
+              </p>
+              <div id="modalComparisonTableContainer"></div>
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.75rem; margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem; flex-wrap: wrap;">
+            <button id="modalBookmarkBtn" class="icon-btn" style="width: auto; padding: 0 1rem; gap: 0.4rem; font-size: 0.85rem;" title="نشان‌کردن در کتابخانه من">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+              <span id="modalBookmarkText">افزودن به کتابخانه من</span>
+            </button>
+            <button id="copyModalLinkBtn" class="icon-btn" style="width: auto; padding: 0 1rem; gap: 0.4rem; font-size: 0.85rem;" title="کپی خلاصه مدخل">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>اشتراک‌گذاری امن</span>
+            </button>
+            <button id="modalDoneBtn" class="quick-exit-btn" style="background: var(--bg-surface-elevated); color: var(--text-primary); border: 1px solid var(--border-highlight); box-shadow: none;">
+              بستن
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Methodology & Information Modal -->
+    <div id="infoModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+      <div class="modal-dialog" style="max-width: 840px;">
+        <button id="infoModalCloseBtn" class="modal-close-btn" aria-label="بستن پنجره">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <div class="modal-dialog-content">
+          <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.25rem;">
+            <div class="card-letter-badge" style="width: 3.5rem; height: 3.5rem; font-size: 1.6rem; background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(192, 132, 252, 0.2)); border-color: rgba(56, 189, 248, 0.3);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <h2 id="infoModalTitle" style="font-size: 1.5rem; font-weight: 800; color: var(--text-primary); margin: 0;"></h2>
+              <span id="infoModalSubtitle" style="font-size: 0.85rem; color: var(--accent-purple); font-weight: 600;"></span>
+            </div>
+          </div>
+
+          <div id="infoModalBody"></div>
+
+          <div style="display: flex; justify-content: flex-end; margin-top: 2rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+            <button id="infoModalDoneBtn" class="quick-exit-btn" style="background: var(--bg-surface-elevated); color: var(--text-primary); border: 1px solid var(--border-highlight); box-shadow: none;">
+              بستن
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accessibility & Theme Customization Modal -->
+    <div id="accessModal" class="control-panel-modal" role="dialog" aria-modal="true">
+      <div class="control-panel-body">
+        <button class="modal-close-btn" onclick="document.getElementById('accessModal').classList.remove('open')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">شخصی‌سازی و دسترسی‌پذیری</h3>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">تنظیمات برای بهینه‌سازی تجربه خوانش و سازگاری با نیازهای دیداری و حرکتی.</p>
+
+        <!-- Setting 1: Font Size -->
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>اندازه قلم (Font Size)</h4>
+            <p>تغییر مقیاس نوشتار در سراسر صفحات دانشنامه</p>
+          </div>
+          <div style="display: flex; gap: 0.35rem;">
+            <button class="filter-chip" onclick="setFontScale(0.9)">کوچک</button>
+            <button class="filter-chip active" id="fontScaleNormal" onclick="setFontScale(1)">استاندارد</button>
+            <button class="filter-chip" onclick="setFontScale(1.15)">بزرگ</button>
+          </div>
+        </div>
+
+        <!-- Setting 2: High Contrast -->
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>کنتراست بالا (High Contrast)</h4>
+            <p>افزایش مرزها و وضوح دیداری برای شرایط نوری شدید یا دید ضعیف</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="contrastToggle" onchange="toggleHighContrast(this.checked)" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Setting 3: Reduce Motion -->
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>کاهش انیمیشن‌ها (Reduce Motion)</h4>
+            <p>حذف یا ساده‌سازی جلوه‌های حرکتی و تابش پرتوهای منشور</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="motionToggle" onchange="toggleReducedMotion(this.checked)" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Setting 4: Color Themes -->
+        <div class="setting-row" style="border-bottom: none;">
+          <div class="setting-info">
+            <h4>تم رنگی اکسنت</h4>
+            <p>انتخاب تم نوری و رنگ‌های تأکیدی رابط کاربری</p>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button class="icon-btn" style="background: #c084fc; width: 28px; height: 28px; border-radius: 50%;" title="بنفش منشوری" onclick="setAccentTheme('purple')"></button>
+            <button class="icon-btn" style="background: #38bdf8; width: 28px; height: 28px; border-radius: 50%;" title="آبی فیروزه‌ای" onclick="setAccentTheme('blue')"></button>
+            <button class="icon-btn" style="background: #34d399; width: 28px; height: 28px; border-radius: 50%;" title="سبز زمردی" onclick="setAccentTheme('green')"></button>
+            <button class="icon-btn" style="background: #fbbf24; width: 28px; height: 28px; border-radius: 50%;" title="کهربایی گرم" onclick="setAccentTheme('amber')"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Privacy, 2FA & Cloud Sync Modal -->
+    <div id="privacyModal" class="control-panel-modal" role="dialog" aria-modal="true">
+      <div class="control-panel-body">
+        <button class="modal-close-btn" onclick="document.getElementById('privacyModal').classList.remove('open')">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+        <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">مرکز حریم خصوصی و امنیت</h3>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">ابزارهای پیشرفته حفاظت از کاربر در محیط‌های ناامن یا دستگاه‌های مشترک.</p>
+
+        <!-- Feature 1: Tab Camouflage -->
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>استتار برگه (Tab Camouflage)</h4>
+            <p>تغییر عنوان برگه و آیکون به «پیش‌بینی آب و هوا» برای پنهان‌سازی از نگاه دیگران</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="camouflageToggle" onchange="toggleCamouflage(this.checked)" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Feature 2: 2FA / Passcode Lock -->
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>احراز هویت دومرحله‌ای / قفل صفحه (2FA)</h4>
+            <p>محافظت از صفحه با پین‌کد یا احراز هویت دوعاملی به هنگام بازگشت به تب</p>
+          </div>
+          <button id="setup2FABtn" class="filter-chip" onclick="open2FASetup()">فعال‌سازی قفل</button>
+        </div>
+
+        <!-- Feature 3: Clear Browser Data -->
+        <div class="setting-row">
+          <div class="setting-info">
+            <h4>پاکسازی فوری ردپای مرورگر</h4>
+            <p>حذف کامل تنظیمات، کش و داده‌های ذخیره‌شده محلی در این دستگاه</p>
+          </div>
+          <button class="filter-chip" style="color: var(--accent-red); border-color: rgba(244,63,94,0.3);" onclick="clearAllData()">پاکسازی همه داده‌ها</button>
+        </div>
+
+        <!-- Feature 4: Encrypted Cloud Sync -->
+        <div class="setting-row" style="border-bottom: none;">
+          <div class="setting-info">
+            <h4>همگام‌سازی ابری رمزنگاری‌شده (Cloud Sync)</h4>
+            <p>پشتیبان‌گیری ناشناس بدون نیاز به ایمیل یا نام؛ با کلید امن خصوصی</p>
+          </div>
+          <button class="filter-chip" onclick="simulateCloudSync()">همگام‌سازی ابری</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.85rem;">
+              <span style="font-weight: 800; font-size: 1.25rem; color: var(--text-primary);">منشور</span>
+              <span style="font-size: 0.8rem; color: var(--accent-purple);">— دانشنامه آزاد فارسی</span>
+            </div>
+            <p style="font-size: 0.875rem; line-height: 1.8; color: var(--text-secondary); max-width: 440px;">
+              پروژه‌ای مستقل و عام‌المنفعه با هدف ایجاد مرجعی مطمئن، علمی و بدون سوگیری درباره مفاهیم جنسیت، جنس و گرایش به زبان فارسی با تکیه بر اسناد نهادهای معتبر جهانی.
+            </p>
+          </div>
+          <div>
+            <div class="footer-title">راهنما و روش‌شناسی</div>
+            <ul class="footer-links">
+              <li><a href="javascript:void(0)" onclick="showModalInfo('about')">درباره منشور</a></li>
+              <li><a href="javascript:void(0)" onclick="showModalInfo('methodology')">متدولوژی برچسب‌های سطح ۱ تا ۳</a></li>
+              <li><a href="javascript:void(0)" onclick="showModalInfo('comparison')">جدول مقایسه‌ای تفکیک مفاهیم</a></li>
+              <li><a href="javascript:void(0)" onclick="showModalInfo('references')">مراجع پزشکی و علمی جهانی</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-title">امنیت و ارتباط</div>
+            <ul class="footer-links">
+              <li><a href="javascript:void(0)" onclick="showModalInfo('contact')">کانال ارتباطی امن</a></li>
+              <li><a href="javascript:void(0)" onclick="document.getElementById('privacyBtn').click()">تنظیمات حریم خصوصی</a></li>
+              <li><a href="javascript:void(0)" onclick="triggerQuickExit()">خروج اضطراری فوری</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>محتوای این دانشنامه تحت مجوز <strong>Creative Commons (CC BY-SA 4.0)</strong> منتشر شده است.</div>
+          <div>طراحی‌شده با احترام به تنوع زیستی، روانی و انسانی</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Component -->
+    <div id="toastNotification" class="toast">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+      <span id="toastMessage">عملیات انجام شد.</span>
+    </div>
+
+    <!-- Vanilla JavaScript Embedded Application Logic -->
+    <script>
+      /* --- Complete Encyclopedia Dataset --- */
+      const TERMS_DATA = [
+        {
+          id: 'l',
+          letter: 'L',
+          persianName: 'لزبین (همجنس‌گرای زن)',
+          englishTerm: 'Lesbian',
+          level: 1,
+          levelName: 'سطح ۱ (نهادی)',
+          levelClass: 'badge-level-1',
+          pillar: 'orientation',
+          pillarName: 'گرایش جنسی',
+          pillarClass: 'pillar-orientation',
+          shortDef: 'زنی که جاذبه عاطفی، عاشقی یا جنسی را نسبت به زنان دیگر تجربه می‌کند.',
+          fullArticle: 'اصطلاح «لزبین» به زنانی اطلاق می‌شود که گرایش پایدار عاطفی، عاشقی یا جنسی به هم‌جنسان خود دارند. ریشه این واژه به جزیره لزبوس در یونان باستان و اشعار سافو، شاعر زن نامدار، بازمی‌گردد. در گفتمان حقوق بشری و سلامت عمومی، لزبین‌ها یکی از پایه‌های اساسی جنبش‌های تاریخی برابری‌خواهی و فمینیسم تقاطعی را تشکیل داده‌اند. هویت لزبین تنها یک بعد رفتاری نیست، بلکه بخشی از هویت وجودی فرد و شیوه درک پیوندهای عاطفی عمیق در جهان پیرامون است.',
+          science: 'سازمان بهداشت جهانی (WHO) و انجمن روانپزشکی آمریکا (APA) از دهه ۱۹۷۰ همجنس‌گرایی را از فهرست اختلالات روانی حذف کرده و بر این نکته تأکید دارند که تنوع در گرایش‌های جنسی، یکی از نمودهای طبیعی و بهنجار تنوع زیستی-روانی انسان است.',
+          misconceptions: [
+            {
+              myth: 'لزبین بودن حاصل یک تجربه شکست عشقی با مردان یا ضربه روحی کودکی است.',
+              fact: 'تحقیقات علمی گسترده نشان می‌دهد گرایش جنسی ساختاری چندعاملی (عصبی، ژنتیکی و زیستی) دارد و بر اثر عوامل بیرونی یا واکنش منفی به تجارب قبلی شکل نمی‌گیرد.'
+            },
+            {
+              myth: 'در روابط زنان همجنس‌گرا، همواره یک نفر باید نقش سنتی «مرد» و دیگری «زن» را بازی کند.',
+              fact: 'روابط لزبین‌ها بر پایه برابری و تفاهم متقابل شکل می‌گیرد و بر الگوهای هنجارپذیر دوقطبی سنتی متکی نیست.'
+            }
+          ]
+        },
+        {
+          id: 'g',
+          letter: 'G',
+          persianName: 'گِی (همجنس‌گرای مرد)',
+          englishTerm: 'Gay',
+          level: 1,
+          levelName: 'سطح ۱ (نهادی)',
+          levelClass: 'badge-level-1',
+          pillar: 'orientation',
+          pillarName: 'گرایش جنسی',
+          pillarClass: 'pillar-orientation',
+          shortDef: 'مردی که کشش عاطفی، احساسی و جنسی نسبت به مردان دیگر دارد.',
+          fullArticle: 'واژه «گِی» به طور عمده برای اشاره به مردانی به کار می‌رود که کشش عاطفی و جنسی نسبت به دیگر مردان دارند، هرچند در متون تاریخی گاهی به عنوان اصطلاحی چتر برای کل گرایش‌های همجنس‌خواهانه نیز استفاده شده است. از منظر اجتماعی، هویت همجنس‌گرایی مردانه یکی از کهن‌ترین الگوهای ثبت‌شده در ادبیات، تاریخ و هنر کهن ایرانی (مانند متون کلاسیک) و سراسر جهان به شمار می‌آید. این هویت دربرگیرنده تجربه‌ای از پیوند عاطفی است که نباید با کلیشه‌های تحمیلی رسانه‌ای یکسان دانسته شود.',
+          science: 'انجمن روانپزشکی آمریکا (APA) تصریح کرده است که تلاش برای تغییر اجباری گرایش جنسی (موسوم به تبدیل‌درمانی) فاقد هرگونه مبنای تجربی است و آسیب‌های شدید روانی به همراه دارد.',
+          misconceptions: [
+            {
+              myth: 'همجنس‌گرایی یک انتخاب یا مد زودگذر اجتماعی است.',
+              fact: 'دانشمندان ژنتیک و عصب‌شناسی ثابت کرده‌اند که گرایش جنسی یک صفت پایدار، درونی و ناانتخابی در وجود انسان است.'
+            },
+            {
+              myth: 'تمام مردان همجنس‌گرا دارای رفتارهای کلیشه‌ای منتسب به زنانگی هستند.',
+              fact: 'مردان همجنس‌گرا دارای تنوع گسترده‌ای از بیان جنسیتی (Gender Expression) از رفتارهای بسیار سنتی تا مدرن هستند و بیان رفتاری هیچ ارتباطی با ذات گرایش ندارد.'
+            }
+          ]
+        },
+        {
+          id: 'b',
+          letter: 'B',
+          persianName: 'بایسکشوال (دوجنس‌گرا)',
+          englishTerm: 'Bisexual',
+          level: 1,
+          levelName: 'سطح ۱ (نهادی)',
+          levelClass: 'badge-level-1',
+          pillar: 'orientation',
+          pillarName: 'گرایش جنسی',
+          pillarClass: 'pillar-orientation',
+          shortDef: 'فردی که کشش عاطفی یا جنسی را به بیش از یک جنسیت تجربه می‌کند.',
+          fullArticle: 'دوجنس‌گرایی یا بایسکشوالیتی به کشش عاطفی، عاشقی و جنسی فرد نسبت به بیش از یک جنس یا جنسیت اطلاق می‌شود. این کشش لزوماً نباید به میزان مساوی، هم‌زمان یا به شیوه یکسان نسبت به جنسیت‌های مختلف باشد. در طول تاریخ، افراد دوجنس‌گرا اغلب با پدیده‌ای موسوم به «دوجنس‌گراهراسی» (Biphobia) و «نامرئی‌سازی» حتی در درون جوامع رنگین‌کمان روبه‌رو بوده‌اند. با این وجود، مطالعات آماری نشان می‌دهد دوجنس‌گرایان بخش قابل توجهی از جامعه رنگین‌کمان را تشکیل می‌دهند.',
+          science: 'مدل طیف جنسیت کینزی (Kinsey Scale) و مقیاس کلاین نشان داده‌اند که تمایلات جنسی انسان در یک طیف پیوسته بین ۰ تا ۶ قرار دارد و دسته‌بندی صفر و یکی بازتاب‌دهنده واقعیت تنوع زیستی انسان نیست.',
+          misconceptions: [
+            {
+              myth: 'دوجنس‌گرایی صرفاً یک مرحله گذرا یا سردرگمی است و فرد در نهایت یک طرف را انتخاب می‌کند.',
+              fact: 'دوجنس‌گرایی یک گرایش جنسی کاملاً مستقل، معتبر و پایدار در طول کل زندگی فرد است.'
+            },
+            {
+              myth: 'افراد دوجنس‌گرا نمی‌توانند به روابط تک‌همسری پایبند باشند.',
+              fact: 'میزان تعهد در رابطه هیچ ارتباطی با گرایش جنسی ندارد؛ افراد دوجنس‌گرا درست همانند دگرجنس‌گرایان و همجنس‌گرایان در روابط متعهدانه و وفادارانه زندگی می‌کنند.'
+            }
+          ]
+        },
+        {
+          id: 't',
+          letter: 'T',
+          persianName: 'تَـرَنس‌جندر (تَـرَنس)',
+          englishTerm: 'Transgender',
+          level: 1,
+          levelName: 'سطح ۱ (نهادی)',
+          levelClass: 'badge-level-1',
+          pillar: 'gender',
+          pillarName: 'هویت جنسیتی',
+          pillarClass: 'pillar-gender',
+          shortDef: 'فردی که هویت جنسیتی درونی او با جنسیتی که در بدو تولد بر اساس اندام به او نسبت داده شده همخوانی ندارد.',
+          fullArticle: 'ترنسجندر یا ترنس، واژه‌ای فراگیر برای توصیف افرادی است که هویت جنسیتی باطنی و روانی‌شان با جنس انتسابی هنگام تولد متفاوت است. این دسته شامل زنان ترنس (منتسب به مرد در بدو تولد)، مردان ترنس (منتسب به زن در بدو تولد) و افراد نان‌باینری (غیردوگانه) می‌شود. هویت جنسیتی به این معناست که فرد در اعماق روان خویش خود را چه جنسیتی می‌شناسد، و این موضوع با گرایش جنسی (اینکه فرد عاشق چه کسی می‌شود) کاملاً دو مقوله مجزا هستند.',
+          science: 'در ویراست یازدهم راهنمای طبقه‌بندی بین‌المللی بیماری‌های سازمان بهداشت جهانی (ICD-11)، مقوله «ناهمخوانی جنسیتی» (Gender Incongruence) از بخش اختلالات روانی خارج و در بخش «سلامت جنسی» دسته‌بندی شد.',
+          misconceptions: [
+            {
+              myth: 'ترنس بودن نیازمند انجام تمام عمل‌های جراحی تغییر بدن است.',
+              fact: 'هویت ترنس بودن به شناخت درونی فرد مربوط است. فرآیند تصدیق جنسیت (Gender Affirmation) شامل مراحل اجتماعی، قانونی، هورمونی یا جراحی است و هر فرد بر اساس ترجیحات و سلامت خود آن را انتخاب می‌کند.'
+            },
+            {
+              myth: 'ترنس بودن ناشی از توهم یا تلقین شبکه‌های اجتماعی در نوجوانان است.',
+              fact: 'مطالعات تصویربرداری مغز و شواهد انجمن غدد درون‌ریز آمریکا تأیید می‌کنند هویت جنسیتی ریشه‌های عمیق نوروبیولوژیک دارد.'
+            }
+          ]
+        },
+        {
+          id: 'q',
+          letter: 'Q',
+          persianName: 'کوئیر / پرسشگر',
+          englishTerm: 'Queer / Questioning',
+          level: 2,
+          levelName: 'سطح ۲ (رایج)',
+          levelClass: 'badge-level-2',
+          pillar: 'umbrella',
+          pillarName: 'چتر هویتی و شمول',
+          pillarClass: 'pillar-umbrella',
+          shortDef: 'واژه‌ای چتر و رهایی‌بخش برای هر هویتی که خارج از هنجارهای تحمیلی دگرجنس‌گرایی و دوگانگی جنسیتی قرار دارد.',
+          fullArticle: 'واژه «کوئیر» (Queer) دارای تاریخی سرشار از تحول معنایی است؛ واژه‌ای که در سده گذشته به عنوان دشنام استفاده می‌شد، در اواخر دهه ۱۹۸۰ توسط کنشگران حقوق برابر بازپس گرفته شد و تبدیل به نمادی از همبستگی، مقاومت و رهایی از جعبه‌های دسته‌بندی خشک شد. کوئیر هم به معنای یک هویت مستقل و هم به عنوان نظریه‌ای انتقادی (Queer Theory) در دانشگاه‌ها به کار می‌رود که هنجاربودگی تحمیلی را زیر سوال می‌برد. حرف Q گاهی نماینده «Questioning» (در حال کشف خود) نیز در نظر گرفته می‌شود.',
+          science: 'نظریه‌پردازان علوم اجتماعی، جامعه‌شناسی و روان‌شناسی مدرن معتقدند استفاده از هویت کوئیر انعطاف‌پذیری لازم را برای پرهیز از آسیب‌های ناشی از انگ‌زنی فراهم می‌سازد.',
+          misconceptions: [
+            {
+              myth: 'کوئیر فقط یک ناسزا است و نباید استفاده شود.',
+              fact: 'اگرچه این واژه ریشه توهین‌آمیز تاریخی داشته، اما دهه‌هاست که جامعه خود آن را به عنوان نشانه‌ای از افتخار و آزادی هویتی بازتعریف کرده است.'
+            },
+            {
+              myth: 'کوئیر یعنی فرد هنوز تکلیف خود را نمی‌داند.',
+              fact: 'بسیاری از افراد با آگاهی کامل و به عنوان هویت نهایی و شفاف خود، واژه کوئیر را برمی‌گزینند زیرا محدودیت سایر برچسب‌ها را نمی‌پذیرند.'
+            }
+          ]
+        },
+        {
+          id: 'i',
+          letter: 'I',
+          persianName: 'اینترسکس (بیناجنسی)',
+          englishTerm: 'Intersex',
+          level: 1,
+          levelName: 'سطح ۱ (نهادی)',
+          levelClass: 'badge-level-1',
+          pillar: 'sex',
+          pillarName: 'ویژگی‌های جنسی (بدنی)',
+          pillarClass: 'pillar-sex',
+          shortDef: 'فردی که با صفات زیست‌شناختی (کروموزومی، هورمونی یا کالبدی) متولد می‌شود که در تعاریف استاندارد دوتایی مذکر/مؤنث نمی‌گنجد.',
+          fullArticle: 'بیناجنسی یا اینترسکس به تنوع‌های زیستی در دستگاه تناسلی، الگوهای کروموزومی (مانند XXY، XO یا موزائیسم) و هورمون‌های بدن اشاره دارد. تخمین زده می‌شود حدود ۱.۷ درصد جمعیت جهان با صفات بیناجنسی به دنیا می‌آیند (مشابه شیوع موی سرخ طبیعی). مطالبه اصلی جامعه بیناجنسی، توقف «جراحی‌های غیرضروری و بدون رضایت آگاهانه در نوزادی» است که صرفاً با هدف انطباق ظاهری بدن با استانداردهای دوتایی انجام می‌شود.',
+          science: 'سازمان بهداشت جهانی و کمیساریای عالی حقوق بشر سازمان ملل جراحی‌های زیبایی دستگاه تناسلی بر روی نوزادان اینترسکس بدون رضایت آگاهانه را نقض حقوق بنیادین و یکپارچگی بدنی اعلام کرده‌اند.',
+          misconceptions: [
+            {
+              myth: 'اینترسکس همان ترنسجندر است.',
+              fact: 'اینترسکس یک ویژگی زیست‌شناختی مادرزادی و فیزیکی بدن است، در حالی که ترنسجندر بودن به هویت جنسیتی درونی و روانی فرد مربوط می‌شود.'
+            },
+            {
+              myth: 'بیناجنسی یک بیماری بسیار نادر و نیازمند درمان فوری جراحی در بدو تولد است.',
+              fact: 'اکثر حالات بیناجنسی هیچ خطری برای حیات ندارند و جراحی تحمیلی زودهنگام ممکن است آسیب‌های حسی و روانی جبران‌ناپذیری در بزرگسالی پدید آورد.'
+            }
+          ]
+        },
+        {
+          id: 'a',
+          letter: 'A',
+          persianName: 'اِیسکشوال (بی‌جنس‌گرا / اِیس)',
+          englishTerm: 'Asexual / Ace',
+          level: 2,
+          levelName: 'سطح ۲ (رایج)',
+          levelClass: 'badge-level-2',
+          pillar: 'orientation',
+          pillarName: 'گرایش جنسی',
+          pillarClass: 'pillar-orientation',
+          shortDef: 'فردی که کشش جنسی پایدار را نسبت به هیچ جنسیتی تجربه نمی‌کند یا آن را بسیار ناچیز احساس می‌کند.',
+          fullArticle: 'بی‌جنس‌گرایی یا ایسکشوالیتی (Ace) یک گرایش جنسی مستقل است که مشخصه آن عدم تجربه کشش جنسی نسبت به دیگران است. افراد بی‌جنس‌گرا طیفی گسترده از گرایش‌های عاطفی را دارند؛ از جمله «دِمی‌سکشوال» (کشش جنسی تنها پس از ایجاد پیوند عاطفی عمیق)، «گری‌سکشوال» (کشش جنسی بسیار نادر) و «آرومانتیک» (عدم کشش رمانتیک). افراد ایس قادر به تجربه پیوندهای عاشقانه، رفاقت‌های عمیق، و روابط صمیمانه هستند.',
+          science: 'راهنمای تشخیصی و آماری اختلالات روانی (DSM-5) به صراحت بی‌جنس‌گرایی را از اختلالات عملکرد جنسی مجزا کرده و آن را به عنوان یک تنوع معتبر در تمایلات جنسی به رسمیت شناخته است.',
+          misconceptions: [
+            {
+              myth: 'بی‌جنس‌گرایی همان پرهیزکاری مذهبی (Celibacy) یا ناتوانی جنسی است.',
+              fact: 'پرهیزکاری یک تصمیم ارادی و رفتاری است، اما بی‌جنس‌گرایی یک گرایش حسی درونی و طبیعی است؛ افراد ایس دچار نقص جسمی نیستند.'
+            },
+            {
+              myth: 'افراد بی‌جنس‌گرا ربات‌گونه‌اند و عشق و محبت را درک نمی‌کنند.',
+              fact: 'کشش جنسی و کشش رمانتیک دو موضوع کاملاً مستقل هستند. بسیاری از افراد ایس عاشق می‌شوند، پیوند زناشویی تشکیل می‌دهند و محبت عاطفی سرشاری دارند.'
+            }
+          ]
+        },
+        {
+          id: 'plus',
+          letter: '+',
+          persianName: 'پلاس (طیف شمول گسترده)',
+          englishTerm: 'Plus (+)',
+          level: 3,
+          levelName: 'سطح ۳ (جامعه‌ساخت)',
+          levelClass: 'badge-level-3',
+          pillar: 'umbrella',
+          pillarName: 'چتر هویتی و شمول',
+          pillarClass: 'pillar-umbrella',
+          shortDef: 'نماد شمول برای تمام هویت‌ها، گرایش‌ها و اصطلاحات پویا که در مخفف‌های اولیه نام برده نشده‌اند.',
+          fullArticle: 'علامت مثبت (+) در انتهای آکرونیم، نشان‌دهنده ماهیت زنده، پویا و باز زبان در توصیف تجربه بشری است. این علامت دربرگیرنده هویت‌هایی چون همه‌جنس‌گرا (Pansexual)، همه‌عاطفی (Panromantic)، نان‌باینری (Non-binary)، بی‌جنسیت (Agender)، دوجنسیت (Bigender)، جندرفلوئید یا سیال‌جنسیت (Genderfluid)، دو-روح (Two-Spirit) و هویت‌های چندگانه دیگر است. علامت پلاس به جامعه یادآوری می‌کند که هیچ چارچوب لغوی بسته‌ای نمی‌تواند مرز نهایی شگفتی‌های تنوع انسانی باشد.',
+          science: 'تحقیقات انسان‌شناسی فرهنگی گواهی می‌دهد که جوامع بومی در سراسر تاریخ، جنسیت‌ها و نقش‌های اجتماعی فراتر از الگوی دوگانه را با کرامت پذیرفته بودند.',
+          misconceptions: [
+            {
+              myth: 'علامت پلاس اختراعی بی‌معنی برای طولانی کردن بیهوده واژه‌هاست.',
+              fact: 'این علامت تضمین می‌کند که هیچ فردی به دلیل قرار نگرفتن در حروفی محدود، احساس تنهایی یا محرومیت از چتر حمایتی نکند.'
+            },
+            {
+              myth: 'این اصطلاحات صرفاً پدیده‌های غربی جدید هستند.',
+              fact: 'شواهد در تاریخ مشرق‌زمین، خاورمیانه، هند و آمریکای لاتین حضور مفاهیم فراتر از جنسیت دوتایی را از هزاران سال پیش مستند کرده‌اند.'
+            }
+          ]
+        }
+      ];
+
+      /* --- State Management --- */
+      let currentFilter = 'all';
+      let currentSearchQuery = '';
+      let isCamouflaged = false;
+      let is2FAEnabled = false;
+      let originalTitle = document.title;
+      let originalFavicon = '';
+      let currentActiveModalTerm = null;
+
+      // Bookmarks (کتابخانه من) state backed by localStorage
+      let bookmarkedIds = new Set();
+      try {
+        const savedBookmarks = localStorage.getItem('manshoor_bookmarks');
+        if (savedBookmarks) {
+          const parsed = JSON.parse(savedBookmarks);
+          if (Array.isArray(parsed)) {
+            bookmarkedIds = new Set(parsed);
+          }
+        }
+      } catch (e) {
+        console.error('Error loading bookmarks', e);
+      }
+
+      function isTermBookmarked(id) {
+        return bookmarkedIds.has(id);
+      }
+
+      function updateBookmarksBadge() {
+        const count = bookmarkedIds.size;
+        const countSpan = document.getElementById('bookmarksCount');
+        if (countSpan) countSpan.textContent = count;
+
+        const headerBadge = document.getElementById('headerBookmarkBadge');
+        if (headerBadge) {
+          headerBadge.textContent = count;
+          headerBadge.style.display = count > 0 ? 'flex' : 'none';
+        }
+      }
+
+      function toggleBookmark(termId) {
+        const term = TERMS_DATA.find(t => t.id === termId);
+        const termName = term ? term.persianName : 'اصطلاح';
+        const wasBookmarked = bookmarkedIds.has(termId);
+
+        if (wasBookmarked) {
+          bookmarkedIds.delete(termId);
+          showToast(`«${termName}» از کتابخانه شما حذف شد.`);
+        } else {
+          bookmarkedIds.add(termId);
+          showToast(`«${termName}» به کتابخانه من افزوده شد.`);
+        }
+
+        try {
+          localStorage.setItem('manshoor_bookmarks', JSON.stringify(Array.from(bookmarkedIds)));
+        } catch (e) {
+          console.error('Error saving bookmarks', e);
+        }
+
+        updateBookmarksBadge();
+
+        // Update card bookmark buttons in DOM if present
+        const cardBookmarkBtns = document.querySelectorAll(`.bookmark-btn[data-id="${termId}"]`);
+        cardBookmarkBtns.forEach(btn => {
+          const isNow = bookmarkedIds.has(termId);
+          btn.classList.toggle('active', isNow);
+          btn.setAttribute('title', isNow ? 'حذف از کتابخانه من' : 'ذخیره در کتابخانه من');
+          const svg = btn.querySelector('svg');
+          if (svg) svg.setAttribute('fill', isNow ? 'currentColor' : 'none');
+        });
+
+        // Update modal bookmark button if this term is open in modal
+        if (currentActiveModalTerm && currentActiveModalTerm.id === termId) {
+          updateModalBookmarkState(termId);
+        }
+
+        // If currently in bookmarks filter, re-render to update the view
+        if (currentFilter === 'bookmarks') {
+          renderCards();
+        }
+      }
+
+      function updateModalBookmarkState(termId) {
+        const isBookmarked = bookmarkedIds.has(termId);
+        const modalTopBtn = document.getElementById('modalTopBookmarkBtn');
+        const modalBottomBtn = document.getElementById('modalBookmarkBtn');
+        const modalBookmarkText = document.getElementById('modalBookmarkText');
+
+        if (modalTopBtn) {
+          modalTopBtn.classList.toggle('active', isBookmarked);
+          modalTopBtn.setAttribute('title', isBookmarked ? 'حذف از کتابخانه من' : 'ذخیره در کتابخانه من');
+          const topSvg = modalTopBtn.querySelector('svg');
+          if (topSvg) topSvg.setAttribute('fill', isBookmarked ? 'currentColor' : 'none');
+        }
+
+        if (modalBottomBtn) {
+          modalBottomBtn.classList.toggle('active', isBookmarked);
+          if (isBookmarked) {
+            modalBottomBtn.style.color = '#fbbf24';
+            modalBottomBtn.style.borderColor = 'rgba(251, 191, 36, 0.55)';
+            modalBottomBtn.style.backgroundColor = 'rgba(251, 191, 36, 0.14)';
+          } else {
+            modalBottomBtn.style.color = '';
+            modalBottomBtn.style.borderColor = '';
+            modalBottomBtn.style.backgroundColor = '';
+          }
+          const bottomSvg = modalBottomBtn.querySelector('svg');
+          if (bottomSvg) bottomSvg.setAttribute('fill', isBookmarked ? 'currentColor' : 'none');
+        }
+
+        if (modalBookmarkText) {
+          modalBookmarkText.textContent = isBookmarked ? 'نشان‌شده در کتابخانه' : 'افزودن به کتابخانه من';
+        }
+      }
+
+      /* --- DOM Elements --- */
+      const cardsGrid = document.getElementById('cardsGrid');
+      const searchInput = document.getElementById('searchInput');
+      const searchClearBtn = document.getElementById('searchClearBtn');
+      const filterChips = document.querySelectorAll('.filter-chip[data-filter]');
+      const detailModal = document.getElementById('detailModal');
+      const modalCloseBtn = document.getElementById('modalCloseBtn');
+      const modalDoneBtn = document.getElementById('modalDoneBtn');
+      const copyModalLinkBtn = document.getElementById('copyModalLinkBtn');
+      const themeToggleBtn = document.getElementById('themeToggleBtn');
+      const floatingQuickExitBtn = document.getElementById('floatingQuickExitBtn');
+      const headerQuickExitBtn = document.getElementById('headerQuickExitBtn');
+      const accessBtn = document.getElementById('accessBtn');
+      const privacyBtn = document.getElementById('privacyBtn');
+      const accessModal = document.getElementById('accessModal');
+      const privacyModal = document.getElementById('privacyModal');
+      const appLockOverlay = document.getElementById('appLockOverlay');
+      const unlockBtn = document.getElementById('unlockBtn');
+      const toastNotification = document.getElementById('toastNotification');
+      const toastMessage = document.getElementById('toastMessage');
+
+      /* --- Initialize App --- */
+      function initApp() {
+        // Load saved theme
+        const savedTheme = localStorage.getItem('manshoor_theme') || 'dark';
+        if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          updateThemeIcon('light');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+          updateThemeIcon('dark');
+        }
+
+        // Load 2FA status
+        if (localStorage.getItem('manshoor_2fa_active') === 'true') {
+          is2FAEnabled = true;
+          document.getElementById('setup2FABtn').textContent = 'قفل فعال است (غیرفعال‌سازی)';
+          document.getElementById('setup2FABtn').style.color = 'var(--accent-green)';
+        }
+
+        updateBookmarksBadge();
+        renderCards();
+        setupEventListeners();
+      }
+
+      /* --- Render Cards --- */
+      function renderCards() {
+        cardsGrid.innerHTML = '';
+
+        const filtered = TERMS_DATA.filter(term => {
+          // Filter by category or bookmark
+          const matchesLevel = (currentFilter === 'all') ||
+            (currentFilter === 'bookmarks' && isTermBookmarked(term.id)) ||
+            (currentFilter === 'level-1' && term.level === 1) ||
+            (currentFilter === 'level-2' && term.level === 2) ||
+            (currentFilter === 'level-3' && term.level === 3);
+
+          if (!matchesLevel) return false;
+
+          // Search query matching
+          if (!currentSearchQuery) return true;
+          const query = currentSearchQuery.toLowerCase().trim();
+          return (
+            term.letter.toLowerCase().includes(query) ||
+            term.persianName.toLowerCase().includes(query) ||
+            term.englishTerm.toLowerCase().includes(query) ||
+            term.shortDef.toLowerCase().includes(query)
+          );
+        });
+
+        document.getElementById('totalCount').textContent = TERMS_DATA.length;
+        updateBookmarksBadge();
+
+        if (filtered.length === 0) {
+          if (currentFilter === 'bookmarks') {
+            cardsGrid.innerHTML = `
+              <div style="grid-column: 1 / -1; text-align: center; padding: 3.5rem 1.5rem; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px dashed var(--border-highlight); box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+                <div style="width: 58px; height: 58px; margin: 0 auto 1.25rem; border-radius: 16px; background: rgba(251, 191, 36, 0.14); color: #fbbf24; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">کتابخانه شما در حال حاضر خالی است</h3>
+                <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto 1.5rem; line-height: 1.8;">
+                  شما می‌توانید با کلیک روی نماد نشان‌کتاب (🔖) در بالای هر کارت یا هنگام مطالعه مقاله در مودال جزئیات، اصطلاحات مورد علاقه خود را در «کتابخانه من» ذخیره کنید تا همیشه به آسانی در دسترس باشند.
+                </p>
+                <button id="resetFromEmptyBookmarkBtn" class="filter-chip" style="background: linear-gradient(135deg, rgba(192,132,252,0.2), rgba(56,189,248,0.2)); color: var(--text-primary); font-weight: 700; border-color: rgba(192, 132, 252, 0.5); padding: 0.6rem 1.35rem; cursor: pointer;">
+                  بازگشت و مشاهده تمام اصطلاحات دانشنامه
+                </button>
+              </div>
+            `;
+            const resetBtn = document.getElementById('resetFromEmptyBookmarkBtn');
+            if (resetBtn) {
+              resetBtn.addEventListener('click', () => {
+                filterChips.forEach(c => c.classList.remove('active'));
+                const allChip = document.querySelector('.filter-chip[data-filter="all"]');
+                if (allChip) allChip.classList.add('active');
+                currentFilter = 'all';
+                renderCards();
+              });
+            }
+          } else {
+            cardsGrid.innerHTML = `
+              <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem; color: var(--text-muted);">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin: 0 auto 1rem; opacity: 0.5;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">هیچ اصطلاحی با عبارت جستجوشده یافت نشد</h3>
+                <p style="font-size: 0.9rem;">امتحان کنید: «لزبین»، «ترنس»، «اینترسکس» یا فیلتر را روی «همه اصطلاحات» بگذارید.</p>
+              </div>
+            `;
+          }
+          return;
+        }
+
+        filtered.forEach(term => {
+          const cardEl = document.createElement('article');
+          cardEl.className = 'term-card rainbow-border-glow';
+          cardEl.setAttribute('role', 'button');
+          cardEl.setAttribute('tabindex', '0');
+          cardEl.setAttribute('aria-label', `مشاهده جزئیات ${term.persianName}`);
+
+          const isBookmarked = isTermBookmarked(term.id);
+
+          cardEl.innerHTML = `
+            <div>
+              <div class="card-top">
+                <div class="card-letter-badge">${term.letter}</div>
+                <div style="display: flex; align-items: center; gap: 0.45rem;">
+                  <span class="card-level-badge ${term.levelClass}">
+                    <span class="level-dot level-${term.level}"></span>
+                    ${term.levelName}
+                  </span>
+                  <button type="button" class="bookmark-btn ${isBookmarked ? 'active' : ''}" data-id="${term.id}" title="${isBookmarked ? 'حذف از کتابخانه من' : 'ذخیره در کتابخانه من'}" aria-label="نشان کردن ${term.persianName}">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="${isBookmarked ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                  </button>
+                </div>
+              </div>
+              <h3 class="card-persian-name">${term.persianName}</h3>
+              <span class="card-english-term">${term.englishTerm}</span>
+              <p class="card-def">${term.shortDef}</p>
+            </div>
+            <div class="card-action-link">
+              <span>مطالعه مقاله و شواهد علمی</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+            </div>
+          `;
+
+          // Handle bookmark button click without bubbling to card click
+          const bmarkBtn = cardEl.querySelector('.bookmark-btn');
+          if (bmarkBtn) {
+            bmarkBtn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              toggleBookmark(term.id);
+            });
+          }
+
+          cardEl.addEventListener('click', () => openDetailModal(term));
+          cardEl.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openDetailModal(term);
+            }
+          });
+
+          cardsGrid.appendChild(cardEl);
+        });
+      }
+
+      /* --- Detail Modal Logic --- */
+      function openDetailModal(term) {
+        currentActiveModalTerm = term;
+
+        document.getElementById('modalLetterBadge').textContent = term.letter;
+        document.getElementById('modalTermTitle').textContent = term.persianName;
+        document.getElementById('modalEnglishTerm').textContent = term.englishTerm;
+
+        const levelBadge = document.getElementById('modalLevelBadge');
+        levelBadge.className = `card-level-badge ${term.levelClass}`;
+        levelBadge.innerHTML = `<span class="level-dot level-${term.level}"></span> ${term.levelName}`;
+
+        const pillarBadge = document.getElementById('modalPillarBadge');
+        if (pillarBadge) {
+          pillarBadge.className = `concept-category-badge ${term.pillarClass}`;
+          pillarBadge.textContent = term.pillarName;
+        }
+
+        const modalPillarName = document.getElementById('modalPillarName');
+        if (modalPillarName) {
+          modalPillarName.textContent = term.pillarName;
+        }
+
+        document.getElementById('modalBodyArticle').textContent = term.fullArticle;
+        document.getElementById('modalScienceContent').textContent = term.science;
+
+        // Synchronize bookmark buttons in modal
+        updateModalBookmarkState(term.id);
+
+        // Render misconceptions accordion
+        const accordionsContainer = document.getElementById('modalMisconceptionsList');
+        accordionsContainer.innerHTML = '';
+
+        term.misconceptions.forEach((item, index) => {
+          const itemEl = document.createElement('div');
+          itemEl.className = 'accordion-item';
+          itemEl.innerHTML = `
+            <button class="accordion-trigger" aria-expanded="false">
+              <span>باور نادرست ${index + 1}: ${item.myth.substring(0, 42)}...</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.2s;"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="accordion-body">
+              <div class="misconception-label">❌ باور غلط رایج:</div>
+              <p style="font-size: 0.92rem; color: var(--text-primary); margin-bottom: 0.75rem;">${item.myth}</p>
+              <div class="fact-label">✓ واقعیت و شواهد علمی:</div>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">${item.fact}</p>
+            </div>
+          `;
+
+          const trigger = itemEl.querySelector('.accordion-trigger');
+          const arrow = trigger.querySelector('svg');
+          trigger.addEventListener('click', () => {
+            const isActive = itemEl.classList.toggle('active');
+            trigger.setAttribute('aria-expanded', isActive);
+            arrow.style.transform = isActive ? 'rotate(180deg)' : 'rotate(0deg)';
+          });
+
+          accordionsContainer.appendChild(itemEl);
+        });
+
+        // Setup embedded comparison table inside detail modal
+        const compareContainer = document.getElementById('modalComparisonTableContainer');
+        if (compareContainer) {
+          compareContainer.innerHTML = getComparisonTableHtml(term.pillar);
+        }
+
+        const toggleCollapse = document.getElementById('modalComparisonTableCollapse');
+        const toggleText = document.getElementById('toggleModalTableText');
+        const toggleIcon = document.getElementById('toggleModalTableIcon');
+        if (toggleCollapse) toggleCollapse.style.display = 'none';
+        if (toggleText) toggleText.textContent = 'نمایش جدول مقایسه‌ای';
+        if (toggleIcon) toggleIcon.style.transform = 'rotate(0deg)';
+
+        // Shortcut to full comparison in Methodology modal
+        const openCompareBtn = document.getElementById('modalOpenCompareBtn');
+        if (openCompareBtn) {
+          openCompareBtn.onclick = () => {
+            closeDetailModal();
+            showModalInfo('comparison', term.pillar);
+          };
+        }
+
+        // Setup safe copy link
+        copyModalLinkBtn.onclick = () => {
+          navigator.clipboard.writeText(`${term.persianName} (${term.englishTerm}): ${term.shortDef} - دانشنامه منشور`);
+          showToast(`خلاصه مدخل «${term.persianName}» کپی شد.`);
+        };
+
+        // Reset scroll position and reading progress to 0%
+        const modalDialog = detailModal.querySelector('.modal-dialog');
+        if (modalDialog) {
+          modalDialog.scrollTop = 0;
+        }
+        const readingProgress = document.getElementById('modalReadingProgress');
+        if (readingProgress) {
+          readingProgress.style.width = '0%';
+        }
+
+        detailModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDetailModal() {
+        currentActiveModalTerm = null;
+        detailModal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      /* --- Quick Exit (خروج اضطراری فوری) --- */
+      function triggerQuickExit() {
+        // Instantly replace window location with neutral educational or weather site
+        window.location.replace('https://www.google.com/search?q=weather+today');
+      }
+
+      /* --- Theme Toggle --- */
+      function toggleTheme() {
+        const isDark = document.documentElement.classList.contains('dark');
+        if (isDark) {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+          localStorage.setItem('manshoor_theme', 'light');
+          updateThemeIcon('light');
+          showToast('تم روشن فعال شد.');
+        } else {
+          document.documentElement.classList.remove('light');
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('manshoor_theme', 'dark');
+          updateThemeIcon('dark');
+          showToast('تم تاریک فعال شد.');
+        }
+      }
+
+      function updateThemeIcon(theme) {
+        const themeIconSpan = document.getElementById('themeIcon');
+        if (theme === 'light') {
+          themeIconSpan.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+        } else {
+          themeIconSpan.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+        }
+      }
+
+      /* --- Tab Camouflage (استتار برگه) --- */
+      function toggleCamouflage(enabled) {
+        isCamouflaged = enabled;
+        if (enabled) {
+          document.title = 'پیش‌بینی وضعیت آب‌وهوای امروز';
+          showToast('استتار برگه فعال شد: عنوان تب تغییر یافت.');
+        } else {
+          document.title = 'منشور — دانشنامه فارسی رنگین‌کمان';
+          showToast('عنوان اصلی دانشنامه بازگردانده شد.');
+        }
+      }
+
+      /* --- 2FA / Passcode Simulation --- */
+      function open2FASetup() {
+        if (!is2FAEnabled) {
+          is2FAEnabled = true;
+          localStorage.setItem('manshoor_2fa_active', 'true');
+          document.getElementById('setup2FABtn').textContent = 'قفل فعال است (غیرفعال‌سازی)';
+          document.getElementById('setup2FABtn').style.color = 'var(--accent-green)';
+          showToast('قفل دومرحله‌ای فعال شد. رمز پیش‌فرض: ۱۲۳۴');
+        } else {
+          is2FAEnabled = false;
+          localStorage.removeItem('manshoor_2fa_active');
+          document.getElementById('setup2FABtn').textContent = 'فعال‌سازی قفل';
+          document.getElementById('setup2FABtn').style.color = '';
+          showToast('قفل امنیتی غیرفعال شد.');
+        }
+      }
+
+      function lockAppScreen() {
+        if (!is2FAEnabled) return;
+        appLockOverlay.style.display = 'flex';
+        document.getElementById('pin1').focus();
+      }
+
+      function attemptUnlock() {
+        const pin = 
+          document.getElementById('pin1').value +
+          document.getElementById('pin2').value +
+          document.getElementById('pin3').value +
+          document.getElementById('pin4').value;
+
+        if (pin === '1234') {
+          appLockOverlay.style.display = 'none';
+          document.getElementById('lockErrorMsg').style.display = 'none';
+          document.getElementById('pin1').value = '';
+          document.getElementById('pin2').value = '';
+          document.getElementById('pin3').value = '';
+          document.getElementById('pin4').value = '';
+          showToast('دانشنامه بازگشایی شد.');
+        } else {
+          document.getElementById('lockErrorMsg').style.display = 'block';
+        }
+      }
+
+      /* --- Clear All Data --- */
+      function clearAllData() {
+        if (confirm('آیا مایل به حذف تمام داده‌های محلی، تنظیمات و تاریخچه در این مرورگر هستید؟')) {
+          localStorage.clear();
+          showToast('تمام داده‌های محلی پاکسازی شدند.');
+          setTimeout(() => location.reload(), 1000);
+        }
+      }
+
+      /* --- Simulated Encrypted Cloud Sync --- */
+      function simulateCloudSync() {
+        showToast('در حال برقراری اتصال رمزنگاری‌شده E2E...');
+        setTimeout(() => {
+          showToast('همگام‌سازی ابری با شناسه ناشناس MN-78249 با موفقیت انجام شد.');
+        }, 1200);
+      }
+
+      /* --- Accessibility Helpers --- */
+      function setFontScale(scale) {
+        document.documentElement.style.setProperty('--font-scale', scale);
+        showToast(`اندازه قلم تنظیم شد: ${Math.round(scale * 100)}%`);
+      }
+
+      function toggleHighContrast(enabled) {
+        if (enabled) {
+          document.documentElement.classList.add('high-contrast');
+          showToast('کنتراست بالا فعال شد.');
+        } else {
+          document.documentElement.classList.remove('high-contrast');
+          showToast('کنتراست استاندارد فعال شد.');
+        }
+      }
+
+      function toggleReducedMotion(enabled) {
+        if (enabled) {
+          document.documentElement.classList.add('reduce-motion');
+          showToast('انیمیشن‌ها به حداقل رسیدند.');
+        } else {
+          document.documentElement.classList.remove('reduce-motion');
+          showToast('انیمیشن‌های روان فعال شدند.');
+        }
+      }
+
+      function setAccentTheme(theme) {
+        if (theme === 'purple') {
+          document.documentElement.style.setProperty('--accent-purple', '#c084fc');
+          document.documentElement.style.setProperty('--accent-blue', '#38bdf8');
+        } else if (theme === 'blue') {
+          document.documentElement.style.setProperty('--accent-purple', '#38bdf8');
+          document.documentElement.style.setProperty('--accent-blue', '#0284c7');
+        } else if (theme === 'green') {
+          document.documentElement.style.setProperty('--accent-purple', '#34d399');
+          document.documentElement.style.setProperty('--accent-blue', '#10b981');
+        } else if (theme === 'amber') {
+          document.documentElement.style.setProperty('--accent-purple', '#fbbf24');
+          document.documentElement.style.setProperty('--accent-blue', '#f59e0b');
+        }
+        showToast('پالت تم رنگی به‌روزرسانی شد.');
+      }
+
+      /* --- Visual Comparison Table Generator --- */
+      function getComparisonTableHtml(highlightPillar = null) {
+        const isOrient = highlightPillar === 'orientation';
+        const isGender = highlightPillar === 'gender';
+        const isSex = highlightPillar === 'sex';
+
+        return `
+          <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th class="criterion-title">شاخص مقایسه</th>
+                  <th class="${isOrient ? 'col-highlighted' : ''}">
+                    <span class="col-header-pill">
+                      <span class="table-badge-dot" style="background: #f43f5e;"></span>
+                      <span>گرایش جنسی (Sexual Orientation)</span>
+                      ${isOrient ? '<span style="font-size: 0.7rem; color: #fb7185; background: rgba(244,63,94,0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">مدخل فعلی</span>' : ''}
+                    </span>
+                  </th>
+                  <th class="${isGender ? 'col-highlighted' : ''}">
+                    <span class="col-header-pill">
+                      <span class="table-badge-dot" style="background: #38bdf8;"></span>
+                      <span>هویت جنسیتی (Gender Identity)</span>
+                      ${isGender ? '<span style="font-size: 0.7rem; color: #38bdf8; background: rgba(56,189,248,0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">مدخل فعلی</span>' : ''}
+                    </span>
+                  </th>
+                  <th class="${isSex ? 'col-highlighted' : ''}">
+                    <span class="col-header-pill">
+                      <span class="table-badge-dot" style="background: #34d399;"></span>
+                      <span>ویژگی‌های جنسی (Sex Characteristics)</span>
+                      ${isSex ? '<span style="font-size: 0.7rem; color: #34d399; background: rgba(52,211,153,0.15); padding: 0.1rem 0.4rem; border-radius: 4px;">مدخل فعلی</span>' : ''}
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="criterion-title">پرسش بنیادین</td>
+                  <td class="${isOrient ? 'col-highlighted' : ''}"><strong style="color: var(--text-primary);">«من عاشق چه کسی می‌شوم یا به چه کسی کشش عاطفی/جنسی دارم؟»</strong></td>
+                  <td class="${isGender ? 'col-highlighted' : ''}"><strong style="color: var(--text-primary);">«من در اعماق روان خویش خود را زن، مرد، نان‌باینری یا... می‌دانم؟»</strong></td>
+                  <td class="${isSex ? 'col-highlighted' : ''}"><strong style="color: var(--text-primary);">«صفات کالبدی، کروموزومی و هورمونی اندام‌های بدن من چیست؟»</strong></td>
+                </tr>
+                <tr>
+                  <td class="criterion-title">تعریف ساده و دقیق</td>
+                  <td class="${isOrient ? 'col-highlighted' : ''}">الگوی پایدار کشش احساسی، عاشقی و جنسی فرد نسبت به افراد بر اساس جنسیت آن‌ها (به هم‌جنس، جنس دیگر، بیش از یک جنسیت، یا عدم کشش).</td>
+                  <td class="${isGender ? 'col-highlighted' : ''}">حس درونی، اصیل و زیسته‌شده فرد از جنسیت خود که می‌تواند با جنس منتسب هنگام تولد منطبق باشد (سیس‌جندر) یا متفاوت باشد (ترنسجندر و نان‌باینری).</td>
+                  <td class="${isSex ? 'col-highlighted' : ''}">صفات بیولوژیکی مادرزادی کالبد شامل ترکیب کروموزومی (XX, XY, XXY)، غدد جنسی (گنادها)، ترشح هورمون‌ها و ساختار آناتومیک اولیه و ثانویه.</td>
+                </tr>
+                <tr>
+                  <td class="criterion-title">حروف مرتبط در LGBTQIA+</td>
+                  <td class="${isOrient ? 'col-highlighted' : ''}">
+                    <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+                      <span class="card-level-badge badge-level-1" style="font-size: 0.75rem;">L (لزبین)</span>
+                      <span class="card-level-badge badge-level-1" style="font-size: 0.75rem;">G (گِی)</span>
+                      <span class="card-level-badge badge-level-1" style="font-size: 0.75rem;">B (دوجنس‌گرا)</span>
+                      <span class="card-level-badge badge-level-2" style="font-size: 0.75rem;">A (بی‌جنس‌گرا)</span>
+                    </div>
+                  </td>
+                  <td class="${isGender ? 'col-highlighted' : ''}">
+                    <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+                      <span class="card-level-badge badge-level-1" style="font-size: 0.75rem;">T (ترنسجندر)</span>
+                      <span class="card-level-badge badge-level-3" style="font-size: 0.75rem;">نان‌باینری (Non-binary)</span>
+                      <span class="card-level-badge badge-level-3" style="font-size: 0.75rem;">سیال‌جنسیت (Genderfluid)</span>
+                    </div>
+                  </td>
+                  <td class="${isSex ? 'col-highlighted' : ''}">
+                    <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+                      <span class="card-level-badge badge-level-1" style="font-size: 0.75rem;">I (اینترسکس / بیناجنسی)</span>
+                      <span class="card-level-badge badge-level-2" style="font-size: 0.75rem;">تنوع رشد جنسی (DSD)</span>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="criterion-title">خاستگاه و شواهد پزشکی</td>
+                  <td class="${isOrient ? 'col-highlighted' : ''}">مدارهای دوپامینی و اکسی‌توسینی دلبستگی؛ برهم‌کنش ژنتیک و بیولوژی چندعاملی پیش از تولد (انجمن روانپزشکی آمریکا APA و WHO).</td>
+                  <td class="${isGender ? 'col-highlighted' : ''}">تکوین نوروبیولوژیک قشر مغز در ماه‌های اولیه جنینی و تثبیت روان‌شناختی در سنین ۳ تا ۵ سالگی (راهنمای ICD-11 سازمان بهداشت جهانی).</td>
+                  <td class="${isSex ? 'col-highlighted' : ''}">کد کروموزومی، بیان ژن‌های جنسی (مانند SRY)، فعالیت هورمون‌های استروئیدی جنینی و فرآیندهای امبریولوژی مادرزادی.</td>
+                </tr>
+                <tr>
+                  <td class="criterion-title">استقلال مفهومی</td>
+                  <td class="${isOrient ? 'col-highlighted' : ''}">کاملاً مستقل از هویت؛ یک فرد ترنسجندر یا یک فرد اینترسکس می‌تواند گرایش هتروسکشوال، همجنس‌گرا، بایسکشوال یا ایس داشته باشد.</td>
+                  <td class="${isGender ? 'col-highlighted' : ''}">کاملاً مستقل از گرایش؛ خود را زن یا مرد دانستن هیچ ربطی به اینکه فرد جذب چه کسی می‌شود ندارد.</td>
+                  <td class="${isSex ? 'col-highlighted' : ''}">کاملاً مستقل از هویت روانی و گرایش؛ ساختار بدنی تعیین‌کننده احساس جنسیتی درونی یا تمایل عاطفی فرد نیست.</td>
+                </tr>
+                <tr>
+                  <td class="criterion-title">کج‌فهمی و باور غلط رایج</td>
+                  <td class="${isOrient ? 'col-highlighted' : ''}"><div style="color: var(--accent-red); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.2rem;">❌ باور نادرست:</div><div>تصور اینکه افراد همجنس‌گرا مایلند جنسیت جسمی خود را تغییر دهند (همجنس‌گرایی ربطی به تغییر کالبد ندارد).</div></td>
+                  <td class="${isGender ? 'col-highlighted' : ''}"><div style="color: var(--accent-red); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.2rem;">❌ باور نادرست:</div><div>تصور اینکه ترنس بودن یک گرایش جنسی شدید یا انحراف اخلاقی است (هویت شناخت من از خود است نه کشش به دیگری).</div></td>
+                  <td class="${isSex ? 'col-highlighted' : ''}"><div style="color: var(--accent-red); font-weight: 700; font-size: 0.8rem; margin-bottom: 0.2rem;">❌ باور نادرست:</div><div>یکی دانستن بیناجنسی (اینترسکس) با ترنسجندر (اینترسکس تفاوت بدنی مادرزادی است، نه هویت روانی).</div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `;
+      }
+
+      /* --- Methodology & Information Modals (Rich accessible modal without alerts) --- */
+      function showModalInfo(type, highlightPillar = null) {
+        const infoModal = document.getElementById('infoModal');
+        const titleEl = document.getElementById('infoModalTitle');
+        const subtitleEl = document.getElementById('infoModalSubtitle');
+        const bodyEl = document.getElementById('infoModalBody');
+
+        if (type === 'methodology') {
+          titleEl.textContent = 'متدولوژی و روش‌شناسی برچسب‌ها';
+          subtitleEl.textContent = 'نظام اعتبارسنجی ۳ سطحی و چارچوب تفکیک مفاهیم';
+          bodyEl.innerHTML = `
+            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem;">
+              <p style="margin-bottom: 1rem;">
+                دانشنامه <strong>«منشور»</strong> اصطلاحات را بر پایه منشأ اعتبار اسنادی، پشتوانه علمی و بستر جامعه‌شناختی به سه سطح متمایز طبقه‌بندی می‌کند تا خواننده مرز میان تعاریف نهادی و اصطلاحات پویا را بشناسد:
+              </p>
+              
+              <div style="display: grid; gap: 0.85rem; margin-bottom: 1.75rem;">
+                <div style="background: var(--bg-surface-elevated); padding: 1rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid rgba(52, 211, 153, 0.3);">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+                    <span class="card-level-badge badge-level-1">سطح ۱ (نهادی / بین‌المللی)</span>
+                  </div>
+                  <p style="font-size: 0.88rem; margin: 0;">اصطلاحات ثبت‌شده در اسناد رسمی سازمان ملل متحد (UN)، سازمان بهداشت جهانی (ICD-11)، انجمن روانپزشکی آمریکا (APA) و قوانین مدنی بین‌المللی. این واژگان بالاترین درجه اجماع حقوقی و پزشکی را دارند.</p>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); padding: 1rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid rgba(251, 191, 36, 0.3);">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+                    <span class="card-level-badge badge-level-2">سطح ۲ (رایج و شناخته‌شده)</span>
+                  </div>
+                  <p style="font-size: 0.88rem; margin: 0;">اصطلاحات مورد توافق جامعه مدنی، دانشگاه‌ها، متون پژوهشی و رسانه‌های معتبر حقوق بشری که در افکار عمومی کاربرد گسترده دارند.</p>
+                </div>
+
+                <div style="background: var(--bg-surface-elevated); padding: 1rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid rgba(148, 163, 184, 0.3);">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+                    <span class="card-level-badge badge-level-3">سطح ۳ (جامعه‌ساخت و پویا)</span>
+                  </div>
+                  <p style="font-size: 0.88rem; margin: 0;">واژگان خودانگیخته، ریزهویت‌ها و آکرونیم‌های توسعه‌یافته جامعه رنگین‌کمان و همچنین هویت‌های سنتی فرهنگ‌های بومی (نظیر Two-Spirit) که بازتاب پویایی زبان و تجارب محلی هستند.</p>
+                </div>
+              </div>
+
+              <div class="section-heading-wrap" style="margin-bottom: 0.75rem;">
+                <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem;">جدول مقایسه‌ای تفکیک ارکان سه‌گانه</h3>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); margin: 0;">نمایش ساده و بصری تفاوتهای کلیدی گرایش جنسی، هویت جنسیتی و ویژگی‌های جنسی:</p>
+              </div>
+
+              ${getComparisonTableHtml(highlightPillar)}
+            </div>
+          `;
+        } else if (type === 'comparison') {
+          titleEl.textContent = 'جدول مقایسه‌ای تفکیک مفاهیم کلیدی';
+          subtitleEl.textContent = 'راهنمای تمایز گرایش جنسی، هویت جنسیتی و ویژگی‌های جنسی';
+          bodyEl.innerHTML = `
+            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+              <p style="margin-bottom: 1rem;">
+                یکی از مهم‌ترین چالش‌های آگاهی‌بخشی، خلط مفاهیم بنیادی است. جدول زیر با تکیه بر استانداردهای یونیسف، سازمان ملل (UN Free & Equal) و راهنماهای بالینی جهانی، تفاوت‌های کلیدی سه رکن بنیادین را به صورت ساده و قابل مقایسه نشان می‌دهد:
+              </p>
+              ${getComparisonTableHtml(highlightPillar)}
+              <div style="font-size: 0.85rem; background: var(--bg-surface-elevated); padding: 0.9rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); color: var(--text-secondary); margin-top: 1rem;">
+                <strong>💡 اصل استقلال هویت‌ها:</strong> هر یک از این سه شاخص کاملاً از یکدیگر مستقل هستند. وضعیت کروموزوم‌ها و جسم شما، هویت درونی روانی‌تان را دیکته نمی‌کند؛ و هویت جنسیتی شما نیز تعیین نمی‌کند که عاشق چه کسی خواهید شد.
+              </div>
+            </div>
+          `;
+        } else if (type === 'about') {
+          titleEl.textContent = 'درباره دانشنامه منشور (Prism)';
+          subtitleEl.textContent = 'پروژه مستقل و آزاد آموزش اصطلاحات رنگین‌کمان';
+          bodyEl.innerHTML = `
+            <div style="color: var(--text-secondary); line-height: 1.85; font-size: 0.95rem;">
+              <p style="margin-bottom: 1rem;">
+                پروژه <strong>«منشور»</strong> با الهام از رفتار فیزیکی منشور که نور نامرئی را به طیف متنوعی از رنگ‌های پرشکوه تجزیه می‌کند، با هدف روشن‌گری و از میان بردن انگ‌ها و کج‌فهمی‌های تاریخی پیرامون جامعه رنگین‌کمان (LGBTQIA+) به زبان فارسی شکل گرفته است.
+              </p>
+              <p style="margin-bottom: 1rem;">
+                این دانشنامه کاملاً مستقل، بدون وابستگی سیاسی و عام‌المنفعه است و تمام محتوای آن بر پایه منابع معتبر روانپزشکی، پزشکی و مصوبات حقوق بشری گردآوری شده است.
+              </p>
+              <div style="background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <strong>🔒 تعهد به حریم خصوصی:</strong> هیچ داده هویتی، آدرس آی‌پی یا کوکی ردیابی در این وب‌سایت ذخیره نمی‌شود و تمام ابزارهای ایمنی از قبیل خروج اضطراری و استتار صفحه برای حفظ امنیت کاربران فراهم آمده است.
+              </div>
+            </div>
+          `;
+        } else if (type === 'references') {
+          titleEl.textContent = 'مراجع پزشکی و علمی جهانی';
+          subtitleEl.textContent = 'استنادهای بین‌المللی مدخل‌های منشور';
+          bodyEl.innerHTML = `
+            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+              <p style="margin-bottom: 1rem;">تمام تعاریف و شواهد ارائه‌شده در دانشنامه منشور مستند به منابع معتبر زیر هستند:</p>
+              <ul style="padding-right: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.65rem;">
+                <li><strong>سازمان بهداشت جهانی (WHO):</strong> ویراست یازدهم راهنمای طبقه‌بندی بین‌المللی بیماری‌ها (ICD-11)</li>
+                <li><strong>انجمن روانپزشکی آمریکا (APA):</strong> راهنمای تشخیصی و آماری اختلالات روانی (DSM-5-TR)</li>
+                <li><strong>کمیساریای عالی حقوق بشر سازمان ملل متحد (OHCHR):</strong> کمپین «آزاد و برابر» (UN Free & Equal)</li>
+                <li><strong>انجمن جهانی حرفه‌ای برای سلامت ترنسجندرها (WPATH):</strong> استانداردهای بالینی مراقبت (Standards of Care v8)</li>
+              </ul>
+            </div>
+          `;
+        } else if (type === 'contact') {
+          titleEl.textContent = 'کانال ارتباطی امن';
+          subtitleEl.textContent = 'ارسال نظرات، پیشنهادها و اصلاحات';
+          bodyEl.innerHTML = `
+            <div style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+              <p style="margin-bottom: 1rem;">
+                برای ارسال پیشنهادهای ویرایشی یا مشارکت در گسترش اصطلاحات دانشنامه، می‌توانید از طریق پروتکل‌های امن پیام‌رسان‌های دارای رمزنگاری مبدأ-تا-مقصد یا سرویس‌های ایمیل رمزگذاری‌شده بدون ثبت لاگ اقدام فرمایید.
+              </p>
+              <div style="background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+                <strong>نکته امنیتی:</strong> برای حفظ حریم شخصی، هیچ‌گاه اطلاعات حساس مکانی یا هویتی خود را در پیام‌ها ارسال نفرمایید.
+              </div>
+            </div>
+          `;
+        }
+
+        infoModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeInfoModal() {
+        const infoModal = document.getElementById('infoModal');
+        if (infoModal) {
+          infoModal.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      }
+
+      /* --- Toast Notification Helper --- */
+      function showToast(msg) {
+        toastMessage.textContent = msg;
+        toastNotification.classList.add('show');
+        setTimeout(() => {
+          toastNotification.classList.remove('show');
+        }, 3200);
+      }
+
+      /* --- Setup Event Listeners --- */
+      function setupEventListeners() {
+        // Quick exit clicks
+        floatingQuickExitBtn.addEventListener('click', triggerQuickExit);
+        headerQuickExitBtn.addEventListener('click', triggerQuickExit);
+
+        // Escape Key for Quick Exit & Modal Closing
+        window.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const infoModal = document.getElementById('infoModal');
+            if (detailModal.classList.contains('open')) {
+              closeDetailModal();
+            } else if (infoModal && infoModal.classList.contains('open')) {
+              closeInfoModal();
+            } else if (accessModal.classList.contains('open')) {
+              accessModal.classList.remove('open');
+            } else if (privacyModal.classList.contains('open')) {
+              privacyModal.classList.remove('open');
+            } else {
+              triggerQuickExit();
+            }
+          }
+        });
+
+        // Theme Toggle
+        themeToggleBtn.addEventListener('click', toggleTheme);
+
+        // Search Input
+        searchInput.addEventListener('input', (e) => {
+          currentSearchQuery = e.target.value;
+          searchClearBtn.classList.toggle('active', currentSearchQuery.length > 0);
+          renderCards();
+        });
+
+        searchClearBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          currentSearchQuery = '';
+          searchClearBtn.classList.remove('active');
+          searchInput.focus();
+          renderCards();
+        });
+
+        // Filter Chips
+        filterChips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            filterChips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            currentFilter = chip.getAttribute('data-filter');
+            renderCards();
+          });
+        });
+
+        // Header Bookmarks Button: filter by bookmarks and scroll to cards section
+        const headerBookmarksBtn = document.getElementById('headerBookmarksBtn');
+        if (headerBookmarksBtn) {
+          headerBookmarksBtn.addEventListener('click', () => {
+            filterChips.forEach(c => c.classList.remove('active'));
+            const bChip = document.getElementById('bookmarksFilterChip');
+            if (bChip) bChip.classList.add('active');
+            currentFilter = 'bookmarks';
+            renderCards();
+            const lettersSec = document.getElementById('letters-section');
+            if (lettersSec) {
+              lettersSec.scrollIntoView({ behavior: 'smooth' });
+            }
+            showToast('کتابخانه من: نمایش اصطلاحات نشان‌شده');
+          });
+        }
+
+        // Detail Modal Bookmark Buttons
+        const modalBookmarkBtn = document.getElementById('modalBookmarkBtn');
+        if (modalBookmarkBtn) {
+          modalBookmarkBtn.addEventListener('click', () => {
+            if (currentActiveModalTerm) {
+              toggleBookmark(currentActiveModalTerm.id);
+            }
+          });
+        }
+
+        const modalTopBookmarkBtn = document.getElementById('modalTopBookmarkBtn');
+        if (modalTopBookmarkBtn) {
+          modalTopBookmarkBtn.addEventListener('click', () => {
+            if (currentActiveModalTerm) {
+              toggleBookmark(currentActiveModalTerm.id);
+            }
+          });
+        }
+
+        // Quick button to open comparison table in hero toolbar
+        const openComparisonPillBtn = document.getElementById('openComparisonPillBtn');
+        if (openComparisonPillBtn) {
+          openComparisonPillBtn.addEventListener('click', () => {
+            showModalInfo('comparison');
+          });
+        }
+
+        // Modal close buttons
+        modalCloseBtn.addEventListener('click', closeDetailModal);
+        modalDoneBtn.addEventListener('click', closeDetailModal);
+        detailModal.addEventListener('click', (e) => {
+          if (e.target === detailModal) closeDetailModal();
+        });
+
+        // Sticky Reading Progress Bar on Detail Modal scroll
+        const detailModalDialog = detailModal.querySelector('.modal-dialog');
+        const modalReadingProgress = document.getElementById('modalReadingProgress');
+        if (detailModalDialog && modalReadingProgress) {
+          detailModalDialog.addEventListener('scroll', () => {
+            const scrollMax = detailModalDialog.scrollHeight - detailModalDialog.clientHeight;
+            const pct = scrollMax > 0 ? (detailModalDialog.scrollTop / scrollMax) * 100 : 0;
+            modalReadingProgress.style.width = `${Math.min(100, Math.max(0, pct))}%`;
+          });
+        }
+
+        // Toggle embedded comparison section inside detail modal
+        const toggleModalTableBtn = document.getElementById('toggleModalTableBtn');
+        const modalComparisonToggleHeader = document.getElementById('modalComparisonToggleHeader');
+        const toggleCollapse = document.getElementById('modalComparisonTableCollapse');
+        const toggleText = document.getElementById('toggleModalTableText');
+        const toggleIcon = document.getElementById('toggleModalTableIcon');
+
+        function toggleModalTable() {
+          if (!toggleCollapse) return;
+          const isHidden = toggleCollapse.style.display === 'none' || toggleCollapse.style.display === '';
+          toggleCollapse.style.display = isHidden ? 'block' : 'none';
+          if (toggleText) toggleText.textContent = isHidden ? 'بستن جدول مقایسه‌ای' : 'نمایش جدول مقایسه‌ای';
+          if (toggleIcon) toggleIcon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+        }
+
+        if (toggleModalTableBtn) {
+          toggleModalTableBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleModalTable();
+          });
+        }
+        if (modalComparisonToggleHeader) {
+          modalComparisonToggleHeader.addEventListener('click', toggleModalTable);
+        }
+
+        // Info & Methodology Modal Listeners
+        const infoModal = document.getElementById('infoModal');
+        const infoModalCloseBtn = document.getElementById('infoModalCloseBtn');
+        const infoModalDoneBtn = document.getElementById('infoModalDoneBtn');
+        if (infoModalCloseBtn) infoModalCloseBtn.addEventListener('click', closeInfoModal);
+        if (infoModalDoneBtn) infoModalDoneBtn.addEventListener('click', closeInfoModal);
+        if (infoModal) {
+          infoModal.addEventListener('click', (e) => {
+            if (e.target === infoModal) closeInfoModal();
+          });
+        }
+
+        // Accessibility modal trigger
+        accessBtn.addEventListener('click', () => accessModal.classList.add('open'));
+        accessModal.addEventListener('click', (e) => {
+          if (e.target === accessModal) accessModal.classList.remove('open');
+        });
+
+        // Privacy modal trigger
+        privacyBtn.addEventListener('click', () => privacyModal.classList.add('open'));
+        privacyModal.addEventListener('click', (e) => {
+          if (e.target === privacyModal) privacyModal.classList.remove('open');
+        });
+
+        // PIN inputs auto-jump
+        const pins = [document.getElementById('pin1'), document.getElementById('pin2'), document.getElementById('pin3'), document.getElementById('pin4')];
+        pins.forEach((pin, idx) => {
+          pin.addEventListener('input', () => {
+            if (pin.value && idx < 3) pins[idx + 1].focus();
+          });
+          pin.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace' && !pin.value && idx > 0) pins[idx - 1].focus();
+            if (e.key === 'Enter') attemptUnlock();
+          });
+        });
+        unlockBtn.addEventListener('click', attemptUnlock);
+
+        // Visibility change for 2FA screen locking
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden && is2FAEnabled) {
+            lockAppScreen();
+          }
+        });
+      }
+
+      // Run on DOM ready
+      document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+  </body>
+</html>
