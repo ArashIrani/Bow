@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="100%" stop-color="#141b2d" />
+    </linearGradient>
+    <linearGradient id="rainbowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="20%" stop-color="#f97316" />
+      <stop offset="40%" stop-color="#eab308" />
+      <stop offset="60%" stop-color="#22c55e" />
+      <stop offset="80%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)" />
+  <!-- Prism Triangle -->
+  <polygon points="256,70 440,410 72,410" fill="none" stroke="url(#rainbowGrad)" stroke-width="28" stroke-linejoin="round" />
+  <polygon points="256,150 376,380 136,380" fill="url(#rainbowGrad)" opacity="0.22" />
+  <!-- Light beam -->
+  <line x1="256" y1="70" x2="220" y2="410" stroke="rgba(255,255,255,0.7)" stroke-width="12" stroke-linecap="round" />
+</svg>

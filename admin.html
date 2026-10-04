@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer" />
+  <title>پنل مدیریت دانشنامه منشور</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpolygon points='12,2 22,21 2,21' fill='none' stroke='%23e91e8c' stroke-width='2.5'/%3E%3Cpolygon points='12,7 18,19 6,19' fill='%2306b6d4' opacity='0.4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <style>
+    /* Admin Specific Styling - Sleek WordPress-inspired Backoffice */
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-main);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Admin Top Bar */
+    .admin-bar {
+      height: 3.5rem;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+    .admin-bar-left, .admin-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .admin-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      color: var(--color-text);
+      font-weight: 800;
+      font-size: 1.15rem;
+    }
+    .admin-brand-tag {
+      font-size: 0.75rem;
+      background: linear-gradient(135deg, rgba(233,30,140,0.15), rgba(124,58,237,0.15));
+      color: var(--color-primary);
+      border: 1px solid rgba(233,30,140,0.3);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+    }
+    .admin-view-site-link {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s;
+    }
+    .admin-view-site-link:hover {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+      background: var(--color-surface-elevated);
+    }
+
+    /* Connection Status Badge */
+    .conn-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .conn-status-badge.online {
+      background: rgba(16, 185, 129, 0.12);
+      color: #10b981;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .conn-status-badge.offline {
+      background: rgba(245, 158, 11, 0.12);
+      color: #f59e0b;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+    .conn-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    /* Layout Wrapper */
+    .admin-layout {
+      display: flex;
+      flex: 1;
+      min-height: calc(100vh - 3.5rem);
+    }
+
+    /* Sidebar Navigation */
+    .admin-sidebar {
+      width: 260px;
+      background: var(--color-surface);
+      border-left: 1px solid var(--border-subtle);
+      padding: 1.5rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .admin-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .admin-menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      color: var(--color-text-secondary);
+      font-weight: 600;
+      font-size: 0.925rem;
+      cursor: pointer;
+      border: 1px solid transparent;
+      background: transparent;
+      width: 100%;
+      text-align: right;
+      transition: all 0.2s;
+    }
+    .admin-menu-item:hover {
+      color: var(--color-text);
+      background: var(--color-surface-elevated);
+    }
+    .admin-menu-item.active {
+      color: var(--color-primary);
+      background: linear-gradient(135deg, rgba(233,30,140,0.1), rgba(124,58,237,0.06));
+      border-color: rgba(233,30,140,0.3);
+      font-weight: 700;
+    }
+    .admin-menu-item-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .admin-menu-badge {
+      font-size: 0.75rem;
+      background: var(--color-surface-subtle);
+      color: var(--color-text-muted);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-pill);
+    }
+    .admin-menu-item.active .admin-menu-badge {
+      background: rgba(233,30,140,0.2);
+      color: var(--color-primary);
+    }
+
+    /* Main Workspace */
+    .admin-workspace {
+      flex: 1;
+      padding: 2rem 2.5rem;
+      overflow-y: auto;
+      background: var(--color-bg);
+      max-width: 1300px;
+    }
+
+    /* Section Headers */
+    .workspace-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.75rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .workspace-title-group h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0 0 0.25rem 0;
+    }
+    .workspace-title-group p {
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    /* Notice / Security Warning Banner */
+    .security-notice-card {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: var(--radius-card);
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+    .security-notice-icon {
+      color: #f59e0b;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    /* Tab Panes */
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+      animation: tabFadeIn 0.25s ease-out;
+    }
+    @keyframes tabFadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Cards and Table Rows */
+    .admin-card {
+      background: var(--color-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-card);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.2s;
+    }
+    .admin-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .admin-card-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .admin-card-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Form Controls */
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-text-secondary);
+      margin-bottom: 0.45rem;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: var(--color-surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+      font-family: inherit;
+      font-size: 0.925rem;
+      transition: all 0.2s;
+      box-sizing: border-box;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-accent);
+      box-shadow: 0 0 0 3px rgba(6,182,212,0.18);
+      background: var(--color-surface);
+    }
+    textarea.form-control {
+      min-height: 80px;
+      resize: vertical;
+      line-height: 1.7;
+    }
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .form-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 860px) {
+      .form-grid-2, .form-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .admin-layout {
+        flex-direction: column;
+      }
+      .admin-sidebar {
+        width: 100%;
+        border-left: none;
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 0.75rem;
+      }
+      .admin-workspace {
+        padding: 1.5rem 1rem;
+      }
+    }
+
+    /* Buttons */
+    .admin-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .admin-btn-primary {
+      background: var(--color-primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(233,30,140,0.25);
+    }
+    .admin-btn-primary:hover {
+      background: #d8157e;
+      transform: translateY(-1px);
+    }
+    .admin-btn-secondary {
+      background: var(--color-surface-subtle);
+      border-color: var(--border-subtle);
+      color: var(--color-text);
+    }
+    .admin-btn-secondary:hover {
+      background: var(--color-surface-elevated);
+      border-color: var(--border-highlight);
+    }
+    .admin-btn-danger {
+      background: rgba(239, 68, 68, 0.12);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+    }
+    .admin-btn-danger:hover {
+      background: #ef4444;
+      color: #fff;
+    }
+    .admin-btn-sm {
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    /* Misconceptions Editor Sub-list */
+    .subitem-box {
+      background: var(--color-surface-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    .subitem-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: var(--color-text-secondary);
+    }
+
+    /* Filter & Search Bar in Workspace */
+    .toolbar-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .toolbar-search {
+      flex: 1;
+      min-width: 240px;
+      max-width: 450px;
+      position: relative;
+    }
+
+    /* Loading Spinner */
+    .spinner-icon {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Admin Bar -->
+  <header class="admin-bar">
+    <div class="admin-bar-left">
+      <a href="index.html" class="admin-brand">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 22 20 2 20" stroke="var(--color-primary)" stroke-width="2.5" />
+        </svg>
+        <span>منشور</span>
+        <span class="admin-brand-tag">پنل مدیریت</span>
+      </a>
+      <a href="index.html" class="admin-view-site-link" target="_blank" title="مشاهده سایت در تب جدید">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        <span>مشاهده دانشنامه</span>
+      </a>
+    </div>
+
+    <div class="admin-bar-right">
+      <div id="repoStatusBadge" class="conn-status-badge offline" onclick="adminApp.switchTab('github')" title="وضعیت اتصال گیت‌هاب">
+        <span class="conn-status-dot"></span>
+        <span id="repoStatusText">حالت پیش‌نویس محلی</span>
+      </div>
+
+      <button id="adminThemeToggle" class="icon-btn" title="تغییر تم (روز/شب)">
+        <svg id="adminThemeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      </button>
+
+      <button class="admin-btn admin-btn-danger admin-btn-sm" onclick="adminApp.purgeTokenConfirm()" title="حذف توکن و خروج امن">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+        </svg>
+        <span>خروج امن</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Layout Container -->
+  <div class="admin-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar">
+      <nav class="admin-menu">
+        <button type="button" class="admin-menu-item active" data-tab="terms" onclick="adminApp.switchTab('terms')">
+          <div class="admin-menu-item-inner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+            <span>مدیریت واژه‌ها</span>
+          </div>
+          <span id="termsCountBadge" class="admin-menu-badge">0</span>
+        </button>
+
+        <button type="button" class="admin-menu-item" data-tab="posts" onclick="adminApp.switchTab('posts')">
+          <div class="admin-menu-item-inner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+            <span>تازه‌های منشور</span>
+          </div>
+          <span id="postsCountBadge" class="admin-menu-badge">0</span>
+        </button>
+
+        <button type="button" class="admin-menu-item" data-tab="settings" onclick="adminApp.switchTab('settings')">
+          <div class="admin-menu-item-inner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+            </svg>
+            <span>تنظیمات و پشتیبان</span>
+          </div>
+        </button>
+
+        <button type="button" class="admin-menu-item" data-tab="github" onclick="adminApp.switchTab('github')">
+          <div class="admin-menu-item-inner">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <span>پیکربندی گیت‌هاب</span>
+          </div>
+        </button>
+      </nav>
+
+      <div style="padding-top:1.5rem;border-top:1px solid var(--border-subtle);font-size:0.75rem;color:var(--color-text-muted);line-height:1.6;">
+        <div>منشور v2.4 (Serverless CMS)</div>
+        <div>ذخیره‌سازی مستقیم در GitHub REST API</div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="admin-workspace">
+      
+      <!-- Security Notice Card -->
+      <div class="security-notice-card">
+        <div class="security-notice-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+        </div>
+        <div>
+          <strong>امنیت دسترسی بدون سرور:</strong> توکن شخصی گیت‌هاب (Personal Access Token) شما درست مانند کلید خانه شماست. این توکن منحصراً درون مرورگر این رایانه نگهداری می‌شود و هیچ سرور میانی به آن دسترسی ندارد. هنگام اتمام کار در رایانه‌های اشتراکی، حتماً از دکمه «خروج امن» استفاده کنید.
+        </div>
+      </div>
+
+      <!-- ================= TAB 1: TERMS ================= -->
+      <section id="tab-terms" class="tab-pane active">
+        <div class="workspace-header">
+          <div class="workspace-title-group">
+            <h1>مدیریت واژه‌ها و اصطلاحات</h1>
+            <p>ویرایش، افزودن و به‌روزرسانی مدخل‌های علمی، تعاریف و کج‌فهمی‌های دانشنامه</p>
+          </div>
+          <div style="display:flex;gap:0.75rem;">
+            <button type="button" class="admin-btn admin-btn-primary" onclick="adminApp.addNewTermPrompt()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>افزودن واژه جدید</span>
+            </button>
+            <button type="button" class="admin-btn admin-btn-secondary" onclick="adminApp.downloadFullBackup('content')" title="دانلود فایل محتوا">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>دانلود JSON</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="toolbar-row">
+          <div class="toolbar-search">
+            <input type="text" id="termsSearchInput" class="form-control" placeholder="جستجوی واژه برای ویرایش..." oninput="adminApp.filterTermsList()" />
+          </div>
+          <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <button type="button" class="filter-chip active" data-admin-filter="all" onclick="adminApp.setTermsFilter('all')">همه واژه‌ها</button>
+            <button type="button" class="filter-chip" data-admin-filter="level-1" onclick="adminApp.setTermsFilter('level-1')">سطح ۱ (نهادی)</button>
+            <button type="button" class="filter-chip" data-admin-filter="level-2" onclick="adminApp.setTermsFilter('level-2')">سطح ۲ (رایج)</button>
+            <button type="button" class="filter-chip" data-admin-filter="level-3" onclick="adminApp.setTermsFilter('level-3')">سطح ۳ (جامعه‌ساخت)</button>
+          </div>
+        </div>
+
+        <!-- Terms Editor Container -->
+        <div id="termsListContainer">
+          <!-- Rendered dynamically via scripts/admin.js -->
+        </div>
+      </section>
+
+      <!-- ================= TAB 2: POSTS ================= -->
+      <section id="tab-posts" class="tab-pane">
+        <div class="workspace-header">
+          <div class="workspace-title-group">
+            <h1>تازه‌های منشور (اطلاعیه‌ها و اخبار)</h1>
+            <p>انتشار پیام‌های کوتاه خبری، به‌روزرسانی‌های نگارشی یا افزودن واژگان جدید در صفحه اصلی</p>
+          </div>
+        </div>
+
+        <!-- Post Creation Card -->
+        <div class="admin-card">
+          <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;">ایجاد پست / به‌روزرسانی جدید</h2>
+          <form id="newPostForm" onsubmit="adminApp.handleCreatePost(event)">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="postTitle">عنوان اطلاعیه *</label>
+                <input type="text" id="postTitle" class="form-control" placeholder="مثلاً: به‌روزرسانی بخش منابع علمی واژگان" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="postDate">تاریخ انتشار (شمسی یا میلادی) *</label>
+                <input type="text" id="postDate" class="form-control" placeholder="مثلاً: ۱۴۰۳/۰۷/۱۵" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="postContent">متن اطلاعیه (پشتیبانی از فرمت‌بندی مارک‌داون) *</label>
+              <div class="md-editor-wrapper">
+                <div class="md-toolbar">
+                  <div class="md-tools-group">
+                    <button type="button" class="md-tool-btn" onclick="adminApp.insertMdTag('postContent', '**', '**')" title="درشت (Bold)"><strong>B</strong></button>
+                    <button type="button" class="md-tool-btn" onclick="adminApp.insertMdTag('postContent', '*', '*')" title="مورب (Italic)"><em>I</em></button>
+                    <button type="button" class="md-tool-btn" onclick="adminApp.insertMdTag('postContent', '- ', '')" title="فهرست گلوله‌ای">• فهرست</button>
+                    <button type="button" class="md-tool-btn" onclick="adminApp.insertMdLink('postContent')" title="پیوند اینترنتی">🔗 پیوند</button>
+                  </div>
+                  <div class="md-tools-group">
+                    <button type="button" id="tab-edit-postContent" class="md-tab-btn active" onclick="adminApp.switchMdTab('postContent', 'edit')">ویرایش متنی</button>
+                    <button type="button" id="tab-prev-postContent" class="md-tab-btn" onclick="adminApp.switchMdTab('postContent', 'prev')">پیش‌نمایش زنده</button>
+                  </div>
+                </div>
+                <textarea id="postContent" class="form-control" rows="3" placeholder="توضیح مختصر درباره تغییرات دانشنامه..." required style="border:none;border-radius:0;background:transparent;" oninput="adminApp.updateMdLivePreview('postContent')"></textarea>
+                <div id="preview-postContent" class="md-preview-pane markdown-body"></div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:flex-end;gap:0.75rem;">
+              <button type="submit" id="savePostBtn" class="admin-btn admin-btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>انتشار در «تازه‌های منشور»</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Published Posts List -->
+        <div style="margin-top:2rem;">
+          <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:1rem;">پست‌های منتشرشده</h2>
+          <div id="postsListContainer">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 3: SETTINGS & BACKUP ================= -->
+      <section id="tab-settings" class="tab-pane">
+        <div class="workspace-header">
+          <div class="workspace-title-group">
+            <h1>تنظیمات کلی و پشتیبان‌گیری</h1>
+            <p>پیکربندی هویت متنی سایت، مقاصد خروج سریع و استتار، و دریافت نسخه کامل داده‌ها</p>
+          </div>
+          <button type="button" class="admin-btn admin-btn-primary" onclick="adminApp.handleSaveSettings()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            <span>ذخیره تنظیمات</span>
+          </button>
+        </div>
+
+        <div class="admin-card">
+          <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;">فایل پیکربندی (settings.json)</h2>
+          <form id="settingsForm" onsubmit="event.preventDefault(); adminApp.handleSaveSettings();">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="settingSiteName">نام سایت (عنوان اصلی)</label>
+                <input type="text" id="settingSiteName" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="settingCamoTitle">عنوان استتار تب مرورگر (Camouflage Title)</label>
+                <input type="text" id="settingCamoTitle" class="form-control" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="settingQuickExitUrl">آدرس مقصد خروج اضطراری سریع (Quick Exit URL)</label>
+              <input type="url" id="settingQuickExitUrl" class="form-control" style="direction:ltr;text-align:left;" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="settingTagline">شعار و بیانیه اصلی دانشنامه (Tagline)</label>
+              <textarea id="settingTagline" class="form-control" rows="2"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="settingFooterText">متن تشریحی کپی‌رایت / فوتر</label>
+              <textarea id="settingFooterText" class="form-control" rows="2"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Full Backup Section -->
+        <div class="admin-card" style="margin-top:2rem;">
+          <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:0.75rem;">دانلود پشتیبان کامل (JSON Backup)</h2>
+          <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1.5rem;line-height:1.7;">
+            می‌توانید نسخه آفلاین و کامل داده‌های واژه‌ها و تنظیمات را مستقیماً به فرمت JSON دانلود کرده و در آرشیو امن نگهداری فرمایید.
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <button type="button" class="admin-btn admin-btn-secondary" onclick="adminApp.downloadFullBackup('content')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>دانلود کامل محتوا و پست‌ها (content.json)</span>
+            </button>
+            <button type="button" class="admin-btn admin-btn-secondary" onclick="adminApp.downloadFullBackup('settings')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>دانلود فایل تنظیمات (settings.json)</span>
+            </button>
+            <button type="button" class="admin-btn admin-btn-primary" onclick="adminApp.openAdminHandbook()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>تولید و دانلود کتابچه جامع دانشنامه (نسخه چاپی / PDF)</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TAB 4: GITHUB & SECURITY ================= -->
+      <section id="tab-github" class="tab-pane">
+        <div class="workspace-header">
+          <div class="workspace-title-group">
+            <h1>پیکربندی گیت‌هاب و امنیت توکن</h1>
+            <p>اتصال بدون سرور از طریق GitHub REST API برای ذخیره‌سازی ابری امن و کامیت مستقیم در ریپازیتوری</p>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:1.25rem;">مشخصات مخزن و توکن دسترسی</h2>
+          <form id="githubConfigForm" onsubmit="event.preventDefault(); adminApp.saveGitHubConfig();">
+            <div class="form-group">
+              <label class="form-label" for="ghToken">توکن دسترسی شخصی (Fine-grained Personal Access Token) *</label>
+              <div style="position:relative;">
+                <input type="password" id="ghToken" class="form-control" placeholder="github_pat_..." style="direction:ltr;text-align:left;font-family:monospace;" />
+                <button type="button" onclick="adminApp.togglePasswordVisibility('ghToken')" style="position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--color-text-muted);cursor:pointer;">
+                  👁️
+                </button>
+              </div>
+              <small style="display:block;margin-top:0.35rem;color:var(--color-text-muted);font-size:0.775rem;">
+                توکن باید دارای مجوزهای «Contents: Read and write» در مخزن مورد نظر باشد.
+              </small>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label class="form-label" for="ghOwner">مالک مخزن (Username یا Org) *</label>
+                <input type="text" id="ghOwner" class="form-control" placeholder="مثلاً: your-username" style="direction:ltr;text-align:left;" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ghRepo">نام مخزن (Repository) *</label>
+                <input type="text" id="ghRepo" class="form-control" placeholder="مثلاً: manshoor-encyclopedia" style="direction:ltr;text-align:left;" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ghBranch">شاخه (Branch) *</label>
+                <input type="text" id="ghBranch" class="form-control" value="main" style="direction:ltr;text-align:left;" />
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-top:1.5rem;flex-wrap:wrap;gap:1rem;">
+              <div style="display:flex;gap:0.75rem;">
+                <button type="submit" class="admin-btn admin-btn-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/></svg>
+                  <span>ذخیره مشخصات مخزن</span>
+                </button>
+                <button type="button" id="verifyRepoBtn" class="admin-btn admin-btn-secondary" onclick="adminApp.verifyGitHubAccess()">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>آزمون و اعتبارسنجی اتصال</span>
+                </button>
+              </div>
+
+              <button type="button" class="admin-btn admin-btn-danger" onclick="adminApp.purgeTokenConfirm()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                <span>حذف توکن از این دستگاه</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="verifyResultAlert" style="display:none;margin-top:1.5rem;" class="admin-card">
+          <!-- Dynamic verification result -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="scripts/admin.js"></script>
+</body>
+</html>
